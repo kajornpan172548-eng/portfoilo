@@ -1,0 +1,380 @@
+/* ===================================================================
+   VIBRANT LUXURY DARK DESIGN SYSTEM
+   Modern Dark Cyber-Aurora Aesthetic
+   Featuring Rich Luminous Colors (Cyan, Violet, Magenta, Emerald, Gold)
+   With Full Color Profile & Vibrant Fluid Liquid Waves
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Prompt:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-deep: #06080e;
+  --bg-card: rgba(13, 17, 28, 0.82);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --font-sans: 'Inter', 'Prompt', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Vibrant Accent Palette */
+  --c-cyan: #06b6d4;
+  --c-sky: #38bdf8;
+  --c-indigo: #6366f1;
+  --c-purple: #8b5cf6;
+  --c-fuchsia: #d946ef;
+  --c-pink: #ec4899;
+  --c-emerald: #10b981;
+  --c-amber: #f59e0b;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg-deep);
+  color: #f8fafc;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-deep);
+  color: #f8fafc;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -------------------------------------------------------------------
+   1. VIBRANT BACKGROUND: COLORFUL LIQUID WAVES + NEON GLOWS
+   ------------------------------------------------------------------- */
+.lux-background-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 0%, #0d1326 0%, #06080e 70%);
+}
+
+/* Minimal Geometric Grid Lines with subtle color tinge */
+.lux-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.035) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 85%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 85%);
+}
+
+/* Ambient 3D Colorful Aurora Glowing Spots */
+.lux-light-spot-1 {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.18) 0%, rgba(6, 8, 14, 0) 65%);
+  filter: blur(60px);
+  will-change: transform;
+  animation: lightPulse 16s ease-in-out infinite alternate;
+}
+
+.lux-light-spot-2 {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.16) 0%, rgba(6, 8, 14, 0) 60%);
+  filter: blur(65px);
+  will-change: transform;
+  animation: lightPulse 20s ease-in-out infinite alternate-reverse;
+}
+
+.lux-light-spot-3 {
+  position: absolute;
+  bottom: 8%;
+  right: 20%;
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.14) 0%, rgba(6, 8, 14, 0) 70%);
+  filter: blur(75px);
+}
+
+/* Large Flowing Liquid Waves (Vibrant Multi-Color SVG Layer) */
+.lux-wave-svg {
+  position: absolute;
+  width: 160%;
+  left: -30%;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.lux-wave-top {
+  top: -100px;
+  animation: liquidWaveSlow1 22s ease-in-out infinite alternate;
+}
+
+.lux-wave-mid {
+  top: 36%;
+  animation: liquidWaveSlow2 28s ease-in-out infinite alternate;
+}
+
+.lux-wave-bottom {
+  bottom: -120px;
+  animation: liquidWaveSlow1 26s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes liquidWaveSlow1 {
+  0% { transform: translate3d(0, 0, 0) scaleY(1); }
+  50% { transform: translate3d(35px, -25px, 0) scaleY(1.05); }
+  100% { transform: translate3d(-25px, 15px, 0) scaleY(0.98); }
+}
+
+@keyframes liquidWaveSlow2 {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(-40px, 30px, 0) rotate(1deg); }
+  100% { transform: translate3d(30px, -20px, 0) rotate(-0.8deg); }
+}
+
+@keyframes lightPulse {
+  0% { opacity: 0.65; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* -------------------------------------------------------------------
+   2. VIBRANT GRADIENTS & CARD SURFACES
+   ------------------------------------------------------------------- */
+.vibrant-gradient-text {
+  background: linear-gradient(135deg, #ffffff 15%, #f1f5f9 45%, #cbd5e1 70%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark-gradient-subtle {
+  background: linear-gradient(135deg, #27272a 0%, #18181b 100%);
+}
+
+/* Dark Stealth Glassmorphism Card */
+.lux-card {
+  background: linear-gradient(180deg, rgba(18, 19, 26, 0.94) 0%, rgba(10, 11, 16, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.25s ease, 
+              box-shadow 0.25s ease;
+}
+
+.lux-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.85), 0 0 20px rgba(255, 255, 255, 0.04);
+}
+
+/* Avatar Titanium Dark Metallic Ring */
+.avatar-glow-ring {
+  background: linear-gradient(135deg, #52525b 0%, #18181b 50%, #3f3f46 100%);
+  padding: 3px;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.avatar-glow-ring:hover {
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.12), 0 0 15px rgba(0, 0, 0, 0.9);
+  transform: scale(1.02);
+}
+
+/* Primary Dark Button */
+.lux-btn-primary {
+  background: linear-gradient(135deg, #27272a 0%, #18181b 60%, #09090b 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-weight: 700;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.lux-btn-primary:hover {
+  background: linear-gradient(135deg, #3f3f46 0%, #27272a 60%, #18181b 100%);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7), 0 0 12px rgba(255, 255, 255, 0.06);
+}
+
+/* Secondary Dark Button */
+.lux-btn-secondary {
+  background-color: rgba(24, 24, 27, 0.8);
+  color: #e4e4e7;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.lux-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(39, 39, 42, 0.9);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* -------------------------------------------------------------------
+   PORTFOLIO VIEW SWITCHER (NO VERTICAL SCROLL)
+   ------------------------------------------------------------------- */
+.portfolio-view {
+  display: none;
+  opacity: 0;
+}
+
+.portfolio-view.active-view {
+  display: block;
+  opacity: 1;
+  animation: viewFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes viewFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.995);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Navigation active states */
+.nav-item-active {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-left: 3px solid #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.nav-item-active i {
+  color: #ffffff !important;
+}
+
+.mobile-nav-active {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.mobile-nav-active i {
+  color: #ffffff !important;
+  transform: scale(1.15);
+}
+
+/* -------------------------------------------------------------------
+   3. SCROLLBAR & SELECTION
+   ------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+::selection {
+  background-color: #3f3f46;
+  color: #ffffff;
+}
+
+.file-upload-input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------------
+   4. MODALS & TOAST ANIMATIONS
+   ------------------------------------------------------------------- */
+@keyframes modalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-in {
+  animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes toastSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+}
+
+.toast-enter {
+  animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast-leave {
+  animation: toastSlideOut 0.25s cubic-bezier(0.7, 0, 0.84, 0) forwards;
+}
+
+/* -------------------------------------------------------------------
+   5. ACCESSIBILITY: PREFERS-REDUCED-MOTION
+   ------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .lux-wave-top,
+  .lux-wave-mid,
+  .lux-wave-bottom,
+  .lux-light-spot-1,
+  .lux-light-spot-2 {
+    animation: none !important;
+  }
+
+  .lux-card,
+  .lux-btn-primary,
+  .lux-btn-secondary,
+  .avatar-glow-ring {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
