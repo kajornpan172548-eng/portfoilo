@@ -14,14 +14,14 @@
       theme: {
         extend: {
           colors: {
-            bgDark: '#090D16',
-            surface: '#111827',
-            surfaceSecondary: '#182235',
-            borderDark: '#263244',
-            accent: '#38BDF8',
-            accentHover: '#7dd3fc',
-            textPrimary: '#F1F5F9',
-            textSecondary: '#94A3B8',
+            bgDark: '#090909',
+            surface: '#1F1F1F',
+            surfaceSecondary: '#171717',
+            borderDark: '#333333',
+            accent: '#FFFFFF',
+            accentHover: '#E5E5E5',
+            textPrimary: '#FFFFFF',
+            textSecondary: '#A3A3A3',
           },
           fontFamily: {
             sans: ['Inter', 'Prompt', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
@@ -35,11 +35,11 @@
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   
-  <!-- Modern Minimalist Stylesheet -->
+  <!-- Dark & White Minimalist Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-[#090D16] text-[#F1F5F9] min-h-screen relative selection:bg-[#38BDF8] selection:text-[#090D16] overflow-x-hidden">
+<body class="bg-[#090909] text-[#FFFFFF] min-h-screen relative selection:bg-[#FFFFFF] selection:text-[#090909] overflow-x-hidden">
 
   <!-- =================================================================== -->
   <!-- 0. INTERACTIVE READING PROGRESS BAR & SPOTLIGHT                      -->
@@ -62,44 +62,44 @@
   <input type="file" id="quick-cert-pdf-input" accept="application/pdf" class="file-upload-input" onchange="handleQuickCertPdfChange(event)" />
 
   <!-- Mobile Sidebar Backdrop Overlay -->
-  <div id="mobile-sidebar-overlay" onclick="toggleMobileSidebar()" class="fixed inset-0 bg-[#090D16]/80 z-40 hidden lg:hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-sidebar-overlay" onclick="toggleMobileSidebar()" class="fixed inset-0 bg-[#090909]/80 z-40 hidden lg:hidden backdrop-blur-sm transition-opacity"></div>
 
   <!-- =================================================================== -->
   <!-- 2. STICKY LEFT VERTICAL SIDEBAR (COLLAPSIBLE & CLEAN)               -->
   <!-- =================================================================== -->
-  <aside id="sidebar" class="fixed top-0 left-0 bottom-0 z-50 w-64 -translate-x-full lg:translate-x-0 bg-[#111827]/95 backdrop-blur-xl border-r border-[#263244] flex flex-col justify-between transition-all duration-300">
+  <aside id="sidebar" class="fixed top-0 left-0 bottom-0 z-50 w-64 -translate-x-full lg:translate-x-0 bg-[#171717]/95 backdrop-blur-xl border-r border-[#333333] flex flex-col justify-between transition-all duration-300">
     <!-- Sidebar Header -->
-    <div class="p-5 border-b border-[#263244]">
+    <div class="p-5 border-b border-[#333333]">
       <div class="flex items-center justify-between">
         <a href="#about" class="flex items-center gap-3 group">
-          <div class="h-9 w-9 rounded-lg bg-[#182235] border border-[#263244] text-[#38BDF8] flex items-center justify-center font-bold font-mono text-sm tracking-tight group-hover:border-[#38BDF8]/50 transition-colors">
+          <div class="h-9 w-9 rounded-lg bg-[#1F1F1F] border border-[#333333] text-[#FFFFFF] flex items-center justify-center font-bold font-mono text-sm tracking-tight group-hover:border-[#FFFFFF] transition-colors">
             KP
           </div>
           <div class="sidebar-label transition-opacity">
-            <span class="block font-bold text-xs tracking-tight text-[#F1F5F9]" data-i18n="navBrand">KHAJONPHAN.P</span>
-            <span class="block text-[10px] font-mono text-[#94A3B8] uppercase tracking-wider" data-i18n="navSub">SPU ICT PORTFOLIO</span>
+            <span class="block font-bold text-xs tracking-tight text-[#FFFFFF]" data-i18n="navBrand">KHAJONPHAN.P</span>
+            <span class="block text-[10px] font-mono text-[#A3A3A3] uppercase tracking-wider" data-i18n="navSub">SPU ICT PORTFOLIO</span>
           </div>
         </a>
 
         <!-- Desktop Collapse Button -->
-        <button onclick="toggleSidebar()" class="hidden lg:flex p-1.5 rounded-md hover:bg-[#182235] text-[#94A3B8] hover:text-[#38BDF8] transition" title="Toggle Sidebar">
-          <i id="sidebar-toggle-icon" class="fa-solid fa-angles-left text-xs text-[#38BDF8]"></i>
+        <button onclick="toggleSidebar()" class="hidden lg:flex p-1.5 rounded-md hover:bg-[#1F1F1F] text-[#A3A3A3] hover:text-[#FFFFFF] transition" title="Toggle Sidebar">
+          <i id="sidebar-toggle-icon" class="fa-solid fa-angles-left text-xs text-[#FFFFFF]"></i>
         </button>
 
         <!-- Mobile Close Button -->
-        <button onclick="toggleMobileSidebar()" class="lg:hidden p-1.5 rounded-md hover:bg-[#182235] text-[#94A3B8]">
+        <button onclick="toggleMobileSidebar()" class="lg:hidden p-1.5 rounded-md hover:bg-[#1F1F1F] text-[#A3A3A3]">
           <i class="fa-solid fa-xmark text-sm"></i>
         </button>
       </div>
 
       <!-- Clean Status Pill -->
-      <div class="sidebar-label mt-4 px-3 py-2 rounded-lg bg-[#182235] border border-[#263244]">
+      <div class="sidebar-label mt-4 px-3 py-2 rounded-lg bg-[#1F1F1F] border border-[#333333]">
         <div class="flex items-center gap-2">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
           </span>
-          <span class="text-[11px] font-medium text-[#94A3B8] truncate" data-i18n="statusBadge">พร้อมรับโอกาสฝึกงาน / ร่วมงาน</span>
+          <span class="text-[11px] font-medium text-[#A3A3A3] truncate" data-i18n="statusBadge">พร้อมรับโอกาสฝึกงาน / ร่วมงาน</span>
         </div>
       </div>
     </div>
@@ -143,16 +143,16 @@
     </nav>
 
     <!-- Sidebar Footer -->
-    <div class="p-4 border-t border-[#263244] space-y-2">
+    <div class="p-4 border-t border-[#333333] space-y-2">
       <!-- Architecture Indicator -->
-      <div class="sidebar-label p-2.5 rounded-lg bg-[#182235] border border-[#263244] text-[11px] font-mono">
-        <div class="flex items-center gap-2 text-[#F1F5F9] font-medium mb-0.5">
-          <i class="fa-solid fa-cloud text-[#38BDF8]"></i> Cloudflare Edge
+      <div class="sidebar-label p-2.5 rounded-lg bg-[#1F1F1F] border border-[#333333] text-[11px] font-mono">
+        <div class="flex items-center gap-2 text-[#FFFFFF] font-medium mb-0.5">
+          <i class="fa-solid fa-cloud text-[#FFFFFF]"></i> Cloudflare Edge
         </div>
-        <p class="text-[10px] text-[#94A3B8]">D1 SQL & R2 Storage Ready</p>
+        <p class="text-[10px] text-[#A3A3A3]">D1 SQL & R2 Storage Ready</p>
       </div>
 
-      <div class="text-[10px] text-[#94A3B8] text-center font-mono sidebar-label pt-1">
+      <div class="text-[10px] text-[#A3A3A3] text-center font-mono sidebar-label pt-1">
         © 2024 SPU ICT Portfolio
       </div>
     </div>
@@ -164,17 +164,17 @@
   <div id="main-content" class="min-h-screen lg:pl-64 transition-all duration-300 flex flex-col relative z-10">
 
     <!-- TOP STICKY HEADER -->
-    <header class="sticky top-0 z-30 w-full h-14 bg-[#090D16]/90 backdrop-blur-md border-b border-[#263244] px-4 sm:px-8 flex items-center justify-between">
+    <header class="sticky top-0 z-30 w-full h-14 bg-[#090909]/90 backdrop-blur-md border-b border-[#333333] px-4 sm:px-8 flex items-center justify-between">
       <!-- Left: Mobile toggle & Breadcrumb -->
       <div class="flex items-center gap-3">
-        <button onclick="toggleMobileSidebar()" class="lg:hidden p-1.5 rounded-md border border-[#263244] bg-[#182235] text-[#94A3B8] hover:text-[#F1F5F9]">
+        <button onclick="toggleMobileSidebar()" class="lg:hidden p-1.5 rounded-md border border-[#333333] bg-[#171717] text-[#A3A3A3] hover:text-[#FFFFFF]">
           <i class="fa-solid fa-bars text-sm"></i>
         </button>
 
-        <div class="flex items-center gap-2 text-xs font-mono text-[#94A3B8]">
-          <span class="hidden sm:inline font-medium text-[#F1F5F9]">SPU_ICT</span>
+        <div class="flex items-center gap-2 text-xs font-mono text-[#A3A3A3]">
+          <span class="hidden sm:inline font-medium text-[#FFFFFF]">SPU_ICT</span>
           <span class="hidden sm:inline">/</span>
-          <span id="header-current-view" class="text-[#38BDF8] font-semibold uppercase tracking-wider">ABOUT</span>
+          <span id="header-current-view" class="text-[#FFFFFF] font-semibold uppercase tracking-wider">ABOUT</span>
         </div>
       </div>
 
@@ -182,25 +182,25 @@
       <div class="flex items-center gap-2 sm:gap-3">
         <!-- Command Palette Trigger Button (Ctrl+K) -->
         <button id="cmd-palette-btn" onclick="openCommandMenu()" 
-                class="hidden sm:inline-flex items-center gap-2 px-2.5 py-1.5 rounded-md border border-[#263244] bg-[#182235] hover:bg-[#263244] text-xs font-mono text-[#94A3B8] hover:text-[#F1F5F9] transition"
+                class="hidden sm:inline-flex items-center gap-2 px-2.5 py-1.5 rounded-md border border-[#333333] bg-[#171717] hover:bg-[#262626] text-xs font-mono text-[#A3A3A3] hover:text-[#FFFFFF] transition"
                 title="Command Palette (Ctrl+K)">
-          <i class="fa-solid fa-terminal text-[11px] text-[#38BDF8]"></i>
+          <i class="fa-solid fa-terminal text-[11px] text-[#FFFFFF]"></i>
           <span class="text-[11px]">Command</span>
-          <kbd class="px-1 py-0.5 bg-[#090D16] border border-[#263244] rounded text-[10px] text-[#38BDF8]">Ctrl K</kbd>
+          <kbd class="px-1 py-0.5 bg-[#090909] border border-[#333333] rounded text-[10px] text-[#FFFFFF]">Ctrl K</kbd>
         </button>
 
         <!-- Multilingual Toggle [TH / EN] -->
         <button id="lang-toggle-btn" onclick="switchLanguage(state.lang === 'th' ? 'en' : 'th')"
-                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#263244] bg-[#182235] hover:bg-[#263244] text-xs font-mono transition"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#333333] bg-[#171717] hover:bg-[#262626] text-xs font-mono transition"
                 title="Switch Language / สลับภาษา">
-          <i class="fa-solid fa-globe text-[11px] text-[#38BDF8]"></i>
-          <span class="font-bold tracking-wider text-[#F1F5F9]">TH</span>
-          <span class="text-xs text-[#94A3B8]">/ EN</span>
+          <i class="fa-solid fa-globe text-[11px] text-[#FFFFFF]"></i>
+          <span class="font-bold tracking-wider text-[#FFFFFF]">TH</span>
+          <span class="text-xs text-[#A3A3A3]">/ EN</span>
         </button>
 
         <!-- Dark Theme Button -->
         <button onclick="toggleTheme()" 
-                class="p-2 h-8 w-8 rounded-md border border-[#263244] bg-[#182235] hover:bg-[#263244] text-xs transition flex items-center justify-center text-[#38BDF8]"
+                class="p-2 h-8 w-8 rounded-md border border-[#333333] bg-[#171717] hover:bg-[#262626] text-xs transition flex items-center justify-center text-[#FFFFFF]"
                 title="Dark Mode">
           <i id="theme-toggle-icon" class="fa-solid fa-moon text-xs"></i>
           <span id="theme-toggle-text" class="sr-only">Dark Mode</span>
@@ -221,112 +221,110 @@
       <!-- SECTION 1: 👤 ข้อมูลส่วนตัว (HERO & PROFILE)                          -->
       <!-- =================================================================== -->
       <section id="about" class="pt-2 scroll-mt-20 reveal-on-scroll">
-        <div class="dev-card p-6 sm:p-10 border border-[#263244] bg-[#111827]">
+        <div class="dev-card p-6 sm:p-10 border border-[#333333] bg-[#1F1F1F]">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
-            <!-- Profile Avatar Column -->
+            <!-- Profile Avatar Column (100% Bright, Natural, No Dark Overlay) -->
             <div class="md:col-span-4 flex flex-col items-center text-center">
-              <div class="relative group cursor-pointer mb-3">
-                <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border border-[#263244] bg-[#182235] p-1">
-                  <!-- PROFILE IMAGE: FULL NATURAL COLOR -->
+              <div class="relative mb-3">
+                <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border border-[#333333] bg-[#171717] p-1.5 shadow-2xl">
+                  <!-- PROFILE IMAGE: BRIGHT, SHARP & 100% NATURAL COLORS -->
                   <img id="profile-avatar-img" 
                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" 
                        alt="Khajonphan Phakdee" 
-                       class="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105" />
+                       class="bright-visual w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-[1.02]" />
                 </div>
 
-                <!-- Hover Overlay to Upload New Photo -->
-                <label for="profile-file-input" class="absolute inset-0 bg-[#090D16]/80 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center text-white cursor-pointer backdrop-blur-xs">
-                  <i class="fa-solid fa-camera text-xl mb-1 text-[#38BDF8]"></i>
-                  <span class="text-xs font-semibold" data-i18n="changePhoto">เปลี่ยนรูปภาพ</span>
-                  <span class="text-[10px] text-[#94A3B8]">คลิกเลือกไฟล์</span>
+                <!-- Clean, Non-Obscuring Camera Button (No Dark Overlay over face) -->
+                <label for="profile-file-input" class="absolute bottom-2 right-2 h-8 w-8 rounded-lg bg-[#1F1F1F]/90 border border-[#333333] text-white flex items-center justify-center cursor-pointer hover:bg-white hover:text-black transition-colors shadow-lg" title="เปลี่ยนรูปภาพ">
+                  <i class="fa-solid fa-camera text-xs"></i>
                 </label>
                 <input type="file" id="profile-file-input" accept="image/*" class="file-upload-input" />
               </div>
 
               <!-- Reset Avatar Button -->
-              <button id="reset-avatar-btn" class="text-[11px] text-[#94A3B8] hover:text-[#38BDF8] font-mono transition">
+              <button id="reset-avatar-btn" class="text-[11px] text-[#A3A3A3] hover:text-[#FFFFFF] font-mono transition">
                 <i class="fa-solid fa-rotate-left mr-1"></i> <span data-i18n="resetPhoto">รีเซ็ตรูปเดิม</span>
               </button>
 
               <!-- GPAX Badge -->
-              <div class="mt-4 px-3.5 py-1.5 rounded-lg bg-[#182235] border border-[#263244] flex items-center gap-2">
-                <i class="fa-solid fa-star text-[#38BDF8] text-xs"></i>
-                <span class="text-xs font-mono text-[#94A3B8]" data-i18n="gpaxLabel">GPAX:</span>
-                <span id="profile-gpax" class="font-bold font-mono text-sm text-[#F1F5F9]">3.72</span>
+              <div class="mt-4 px-3.5 py-1.5 rounded-lg bg-[#171717] border border-[#333333] flex items-center gap-2">
+                <i class="fa-solid fa-star text-[#FFFFFF] text-xs"></i>
+                <span class="text-xs font-mono text-[#A3A3A3]" data-i18n="gpaxLabel">GPAX:</span>
+                <span id="profile-gpax" class="font-bold font-mono text-sm text-[#FFFFFF]">3.72</span>
               </div>
             </div>
 
             <!-- Profile Info Column -->
             <div class="md:col-span-8 flex flex-col justify-center">
-              <div class="flex items-center gap-2 text-xs font-mono text-[#94A3B8] mb-2 flex-wrap">
+              <div class="flex items-center gap-2 text-xs font-mono text-[#A3A3A3] mb-2 flex-wrap">
                 <!-- Interactive & Editable Live Status -->
-                <div id="live-status-container" class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[#182235] border border-emerald-500/30 cursor-pointer hover:border-emerald-400 transition" onclick="editLiveStatus()" title="คลิกเพื่อแก้ไขสถานะ / Click to edit status">
+                <div id="live-status-container" class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[#171717] border border-emerald-500/30 cursor-pointer hover:border-emerald-400 transition" onclick="editLiveStatus()" title="คลิกเพื่อแก้ไขสถานะ / Click to edit status">
                   <span class="relative flex h-2 w-2">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
                   </span>
                   <span id="live-status-text" class="text-emerald-400 font-medium">Currently Available for Opportunities</span>
-                  <i class="fa-solid fa-pen text-[9px] text-[#94A3B8] ml-1"></i>
+                  <i class="fa-solid fa-pen text-[9px] text-[#A3A3A3] ml-1"></i>
                 </div>
                 <span>•</span>
                 <span data-i18n="heroGreeting">ยินดีต้อนรับ, ผมคือ</span>
               </div>
 
               <!-- Name -->
-              <h1 id="profile-name" class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-2 text-[#F1F5F9]">
+              <h1 id="profile-name" class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-2 text-[#FFFFFF]">
                 ขจรพัน ภักดี
               </h1>
 
               <!-- Role & Degree with Accent -->
-              <h2 id="profile-role" class="text-sm sm:text-base font-medium text-[#38BDF8] mb-4 tracking-wide font-mono">
+              <h2 id="profile-role" class="text-sm sm:text-base font-medium text-[#FFFFFF] mb-4 tracking-wide font-mono">
                 นักศึกษาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT) | Full-Stack Web Developer
               </h2>
 
               <!-- Bio -->
-              <p id="profile-bio" class="text-xs sm:text-sm text-[#94A3B8] leading-relaxed mb-6 font-normal">
+              <p id="profile-bio" class="text-xs sm:text-sm text-[#A3A3A3] leading-relaxed mb-6 font-normal">
                 นักศึกษาชั้นปีที่ 4 คณะเทคโนโลยีสารสนเทศ สาขาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT) มหาวิทยาลัยศรีปทุม มีความมุ่งมั่นในการเป็น Full-Stack Developer ที่เชี่ยวชาญการสร้าง Web Application ประสิทธิภาพสูงด้วยสถาปัตยกรรมคลาวด์ พร้อมดีไซน์ทันสมัย มีสีสันสดใส ใช้งานง่าย และตอบโจทย์ธุรกิจจริง
               </p>
 
               <!-- Contact Pills Grid -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
-                <a href="tel:0655730374" class="flex items-center gap-3 p-2.5 rounded-lg border border-[#263244] bg-[#182235] hover:border-[#38BDF8]/40 transition group">
-                  <div class="h-8 w-8 rounded-md bg-[#111827] flex items-center justify-center text-[#38BDF8] text-xs">
+                <a href="tel:0655730374" class="flex items-center gap-3 p-2.5 rounded-lg border border-[#333333] bg-[#171717] hover:border-[#FFFFFF]/60 transition group">
+                  <div class="h-8 w-8 rounded-md bg-[#1F1F1F] flex items-center justify-center text-[#FFFFFF] text-xs">
                     <i class="fa-solid fa-phone"></i>
                   </div>
                   <div>
-                    <span class="block text-[10px] font-mono text-[#94A3B8]" data-i18n="phoneLabel">เบอร์โทรศัพท์</span>
-                    <span id="profile-phone" class="text-xs font-medium text-[#F1F5F9]">065-573-0374</span>
+                    <span class="block text-[10px] font-mono text-[#A3A3A3]" data-i18n="phoneLabel">เบอร์โทรศัพท์</span>
+                    <span id="profile-phone" class="text-xs font-medium text-[#FFFFFF]">065-573-0374</span>
                   </div>
                 </a>
 
-                <a href="mailto:khajonphan.phakdee@spu.ac.th" class="flex items-center gap-3 p-2.5 rounded-lg border border-[#263244] bg-[#182235] hover:border-[#38BDF8]/40 transition group truncate">
-                  <div class="h-8 w-8 rounded-md bg-[#111827] flex items-center justify-center text-[#38BDF8] text-xs flex-shrink-0">
+                <a href="mailto:khajonphan.phakdee@spu.ac.th" class="flex items-center gap-3 p-2.5 rounded-lg border border-[#333333] bg-[#171717] hover:border-[#FFFFFF]/60 transition group truncate">
+                  <div class="h-8 w-8 rounded-md bg-[#1F1F1F] flex items-center justify-center text-[#FFFFFF] text-xs flex-shrink-0">
                     <i class="fa-solid fa-envelope"></i>
                   </div>
                   <div class="truncate">
-                    <span class="block text-[10px] font-mono text-[#94A3B8]" data-i18n="emailLabel">อีเมล</span>
-                    <span id="profile-email" class="text-xs font-medium text-[#F1F5F9] truncate">khajonphan.phakdee@spu.ac.th</span>
+                    <span class="block text-[10px] font-mono text-[#A3A3A3]" data-i18n="emailLabel">อีเมล</span>
+                    <span id="profile-email" class="text-xs font-medium text-[#FFFFFF] truncate">khajonphan.phakdee@spu.ac.th</span>
                   </div>
                 </a>
 
-                <div class="flex items-center gap-3 p-2.5 rounded-lg border border-[#263244] bg-[#182235]">
-                  <div class="h-8 w-8 rounded-md bg-[#111827] flex items-center justify-center text-[#38BDF8] text-xs">
+                <div class="flex items-center gap-3 p-2.5 rounded-lg border border-[#333333] bg-[#171717]">
+                  <div class="h-8 w-8 rounded-md bg-[#1F1F1F] flex items-center justify-center text-[#FFFFFF] text-xs">
                     <i class="fa-solid fa-location-dot"></i>
                   </div>
                   <div>
-                    <span class="block text-[10px] font-mono text-[#94A3B8]" data-i18n="locationLabel">ที่อยู่</span>
-                    <span id="profile-location" class="text-xs font-medium text-[#F1F5F9]" data-i18n="locationValue">กรุงเทพมหานคร, ประเทศไทย</span>
+                    <span class="block text-[10px] font-mono text-[#A3A3A3]" data-i18n="locationLabel">ที่อยู่</span>
+                    <span id="profile-location" class="text-xs font-medium text-[#FFFFFF]" data-i18n="locationValue">กรุงเทพมหานคร, ประเทศไทย</span>
                   </div>
                 </div>
 
-                <div class="flex items-center gap-3 p-2.5 rounded-lg border border-[#263244] bg-[#182235]">
-                  <div class="h-8 w-8 rounded-md bg-[#111827] flex items-center justify-center text-[#38BDF8] text-xs">
+                <div class="flex items-center gap-3 p-2.5 rounded-lg border border-[#333333] bg-[#171717]">
+                  <div class="h-8 w-8 rounded-md bg-[#1F1F1F] flex items-center justify-center text-[#FFFFFF] text-xs">
                     <i class="fa-solid fa-building-columns"></i>
                   </div>
                   <div>
-                    <span class="block text-[10px] font-mono text-[#94A3B8]">สังกัด</span>
-                    <span class="text-xs font-medium text-[#F1F5F9]">ม.ศรีปทุม (SPU ICT)</span>
+                    <span class="block text-[10px] font-mono text-[#A3A3A3]">สังกัด</span>
+                    <span class="text-xs font-medium text-[#FFFFFF]">ม.ศรีปทุม (SPU ICT)</span>
                   </div>
                 </div>
               </div>
@@ -346,22 +344,22 @@
           </div>
 
           <!-- Quick Stats Row -->
-          <div class="mt-8 pt-6 border-t border-[#263244] grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-            <div class="p-3.5 rounded-xl bg-[#182235] border border-[#263244]">
-              <span class="block text-2xl font-bold text-[#38BDF8] font-mono">3.72</span>
-              <span class="text-xs text-[#94A3B8] font-mono" data-i18n="gpaxLabel">เกรดเฉลี่ยสะสม</span>
+          <div class="mt-8 pt-6 border-t border-[#333333] grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+            <div class="p-3.5 rounded-xl bg-[#171717] border border-[#333333]">
+              <span class="block text-2xl font-bold text-[#FFFFFF] font-mono">3.72</span>
+              <span class="text-xs text-[#A3A3A3] font-mono" data-i18n="gpaxLabel">เกรดเฉลี่ยสะสม</span>
             </div>
-            <div class="p-3.5 rounded-xl bg-[#182235] border border-[#263244]">
-              <span class="block text-2xl font-bold text-[#F1F5F9] font-mono">Year 4</span>
-              <span class="text-xs text-[#94A3B8] font-mono" data-i18n="statYears">นักศึกษาชั้นปีที่ 4</span>
+            <div class="p-3.5 rounded-xl bg-[#171717] border border-[#333333]">
+              <span class="block text-2xl font-bold text-[#FFFFFF] font-mono">Year 4</span>
+              <span class="text-xs text-[#A3A3A3] font-mono" data-i18n="statYears">นักศึกษาชั้นปีที่ 4</span>
             </div>
-            <div class="p-3.5 rounded-xl bg-[#182235] border border-[#263244]">
-              <span class="block text-2xl font-bold text-[#F1F5F9] font-mono">10+</span>
-              <span class="text-xs text-[#94A3B8] font-mono" data-i18n="statProjects">โครงงานที่พัฒนา</span>
+            <div class="p-3.5 rounded-xl bg-[#171717] border border-[#333333]">
+              <span class="block text-2xl font-bold text-[#FFFFFF] font-mono">10+</span>
+              <span class="text-xs text-[#A3A3A3] font-mono" data-i18n="statProjects">โครงงานที่พัฒนา</span>
             </div>
-            <div class="p-3.5 rounded-xl bg-[#182235] border border-[#263244]">
+            <div class="p-3.5 rounded-xl bg-[#171717] border border-[#333333]">
               <span class="block text-2xl font-bold text-emerald-400 font-mono">100%</span>
-              <span class="text-xs text-[#94A3B8] font-mono" data-i18n="statCode">ความพร้อมทำงาน</span>
+              <span class="text-xs text-[#A3A3A3] font-mono" data-i18n="statCode">ความพร้อมทำงาน</span>
             </div>
           </div>
 
@@ -372,29 +370,29 @@
                 <div class="term-dot bg-rose-500"></div>
                 <div class="term-dot bg-amber-500"></div>
                 <div class="term-dot bg-emerald-500"></div>
-                <span class="text-[11px] font-mono text-[#94A3B8] ml-2 hidden sm:inline">khajonphan@spu-ict:~</span>
+                <span class="text-[11px] font-mono text-[#A3A3A3] ml-2 hidden sm:inline">khajonphan@spu-ict:~</span>
               </div>
               <div class="flex items-center gap-1.5 flex-wrap">
                 <button type="button" onclick="runTerminalCmd('whoami')" class="term-command-chip">whoami</button>
                 <button type="button" onclick="runTerminalCmd('skills')" class="term-command-chip">skills</button>
                 <button type="button" onclick="runTerminalCmd('projects')" class="term-command-chip">projects</button>
                 <button type="button" onclick="runTerminalCmd('contact')" class="term-command-chip">contact</button>
-                <button type="button" onclick="runTerminalCmd('clear')" class="term-command-chip text-[#94A3B8] hover:text-rose-400">clear</button>
+                <button type="button" onclick="runTerminalCmd('clear')" class="term-command-chip text-[#A3A3A3] hover:text-white">clear</button>
               </div>
             </div>
             <div id="term-body" class="term-body">
-              <div class="text-[#94A3B8]">Khajonphan Interactive Developer Shell [v2.4.0-spu]</div>
-              <div class="text-[#94A3B8]">Type <span class="text-[#38BDF8]">help</span> or click any quick command chip above to execute.</div>
-              <div class="mt-2 text-[#F1F5F9]"><span class="text-emerald-400">guest@spu</span>:<span class="text-[#38BDF8]">~</span>$ whoami</div>
-              <div class="text-[#94A3B8] pl-2 border-l border-[#263244] mt-1 text-xs leading-relaxed">
+              <div class="text-[#A3A3A3]">Khajonphan Interactive Developer Shell [v2.4.0-spu]</div>
+              <div class="text-[#A3A3A3]">Type <span class="text-[#FFFFFF] underline">help</span> or click any quick command chip above to execute.</div>
+              <div class="mt-2 text-[#FFFFFF]"><span class="text-emerald-400">guest@spu</span>:<span class="text-[#FFFFFF]">~</span>$ whoami</div>
+              <div class="text-[#A3A3A3] pl-2 border-l border-[#333333] mt-1 text-xs leading-relaxed">
                 Khajonphan Phakdee (ขจรพัน ภักดี) - 4th Year ICT Student at Sripatum University (SPU). Full-Stack Web Developer specializing in Cloudflare Edge & APIs. GPAX 3.72.
               </div>
             </div>
-            <form id="terminal-form" onsubmit="handleTerminalSubmit(event)" class="flex items-center border-t border-[#263244] bg-[#090D16]/80 px-4 py-2.5">
+            <form id="terminal-form" onsubmit="handleTerminalSubmit(event)" class="flex items-center border-t border-[#333333] bg-[#090909]/80 px-4 py-2.5">
               <span class="text-emerald-400 font-mono text-xs mr-2 font-bold">$</span>
               <input type="text" id="terminal-input" placeholder="Type command (e.g. whoami, skills, projects, contact, clear)..." 
-                     class="w-full bg-transparent text-xs font-mono text-[#F1F5F9] focus:outline-none placeholder:text-[#94A3B8]/50" autocomplete="off" />
-              <button type="submit" class="text-xs font-mono text-[#38BDF8] hover:text-white px-2 py-0.5 rounded transition">
+                     class="w-full bg-transparent text-xs font-mono text-[#FFFFFF] focus:outline-none placeholder:text-[#A3A3A3]/50" autocomplete="off" />
+              <button type="submit" class="text-xs font-mono text-[#FFFFFF] hover:text-white px-2 py-0.5 rounded transition">
                 <i class="fa-solid fa-arrow-turn-down text-xs rotate-90"></i>
               </button>
             </form>
@@ -407,70 +405,70 @@
       <!-- =================================================================== -->
       <section id="education" class="scroll-mt-20 reveal-on-scroll">
         <div class="mb-6">
-          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#38BDF8] mb-1">
-            <span class="h-1.5 w-1.5 rounded-full bg-[#38BDF8]"></span>
+          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#FFFFFF] mb-1">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#FFFFFF]"></span>
             <span data-i18n="eduTitle">ประวัติการศึกษา</span>
           </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-[#F1F5F9] tracking-tight" data-i18n="eduSubtitle">
+          <h2 class="text-xl sm:text-2xl font-bold text-[#FFFFFF] tracking-tight" data-i18n="eduSubtitle">
             เส้นทางการศึกษาระดับอุดมศึกษา ณ มหาวิทยาลัยศรีปทุม (SPU)
           </h2>
         </div>
 
-        <div class="dev-card p-6 sm:p-8 bg-[#111827] border border-[#263244]">
+        <div class="dev-card p-6 sm:p-8 bg-[#1F1F1F] border border-[#333333]">
           <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
             <div class="flex items-start gap-4">
-              <div class="h-11 w-11 rounded-lg bg-[#182235] border border-[#263244] flex items-center justify-center text-lg text-[#38BDF8] font-bold flex-shrink-0">
+              <div class="h-11 w-11 rounded-lg bg-[#171717] border border-[#333333] flex items-center justify-center text-lg text-[#FFFFFF] font-bold flex-shrink-0">
                 <i class="fa-solid fa-graduation-cap"></i>
               </div>
               <div>
-                <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono font-medium bg-[#182235] text-[#38BDF8] border border-[#263244] uppercase tracking-wider mb-1.5">
+                <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono font-medium bg-[#171717] text-[#FFFFFF] border border-[#333333] uppercase tracking-wider mb-1.5">
                   Bachelor of Science (B.S.)
                 </span>
-                <h3 class="text-base sm:text-lg font-semibold text-[#F1F5F9] mb-1" data-i18n="eduDegree">
+                <h3 class="text-base sm:text-lg font-semibold text-[#FFFFFF] mb-1" data-i18n="eduDegree">
                   วิทยาศาสตรบัณฑิต (วท.บ.) สาขาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT)
                 </h3>
-                <p class="text-xs sm:text-sm text-[#94A3B8]" data-i18n="eduInst">
+                <p class="text-xs sm:text-sm text-[#A3A3A3]" data-i18n="eduInst">
                   มหาวิทยาลัยศรีปทุม (Sripatum University - SPU)
                 </p>
               </div>
             </div>
 
             <div class="flex flex-col sm:items-end gap-1 font-mono text-xs">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#182235] border border-[#263244] text-[#F1F5F9] font-medium">
-                <i class="fa-regular fa-calendar text-[#38BDF8]"></i> <span data-i18n="eduPeriod">2564 – ปัจจุบัน (ปี 4)</span>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#171717] border border-[#333333] text-[#FFFFFF] font-medium">
+                <i class="fa-regular fa-calendar text-[#FFFFFF]"></i> <span data-i18n="eduPeriod">2564 – ปัจจุบัน (ปี 4)</span>
               </span>
-              <span class="text-[#94A3B8]">GPAX: <strong class="text-[#38BDF8]">3.72 / 4.00</strong></span>
+              <span class="text-[#A3A3A3]">GPAX: <strong class="text-[#FFFFFF]">3.72 / 4.00</strong></span>
             </div>
           </div>
 
-          <div class="border-t border-[#263244] pt-5 space-y-3">
-            <h4 class="text-xs font-mono font-medium uppercase tracking-wider text-[#94A3B8]" data-i18n="eduMajorHighlights">
+          <div class="border-t border-[#333333] pt-5 space-y-3">
+            <h4 class="text-xs font-mono font-medium uppercase tracking-wider text-[#A3A3A3]" data-i18n="eduMajorHighlights">
               รายวิชาสำคัญและทักษะเฉพาะทาง:
             </h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
-              <div class="p-2.5 rounded-lg border border-[#263244] bg-[#182235] text-xs text-[#F1F5F9] flex items-center gap-2">
-                <i class="fa-solid fa-code text-[#38BDF8]"></i> Software Engineering
+              <div class="p-2.5 rounded-lg border border-[#333333] bg-[#171717] text-xs text-[#FFFFFF] flex items-center gap-2">
+                <i class="fa-solid fa-code text-[#FFFFFF]"></i> Software Engineering
               </div>
-              <div class="p-2.5 rounded-lg border border-[#263244] bg-[#182235] text-xs text-[#F1F5F9] flex items-center gap-2">
-                <i class="fa-solid fa-cloud text-[#38BDF8]"></i> Cloud Architecture & Edge
+              <div class="p-2.5 rounded-lg border border-[#333333] bg-[#171717] text-xs text-[#FFFFFF] flex items-center gap-2">
+                <i class="fa-solid fa-cloud text-[#FFFFFF]"></i> Cloud Architecture & Edge
               </div>
-              <div class="p-2.5 rounded-lg border border-[#263244] bg-[#182235] text-xs text-[#F1F5F9] flex items-center gap-2">
-                <i class="fa-solid fa-database text-[#38BDF8]"></i> Database Systems (SQL/NoSQL)
+              <div class="p-2.5 rounded-lg border border-[#333333] bg-[#171717] text-xs text-[#FFFFFF] flex items-center gap-2">
+                <i class="fa-solid fa-database text-[#FFFFFF]"></i> Database Systems (SQL/NoSQL)
               </div>
-              <div class="p-2.5 rounded-lg border border-[#263244] bg-[#182235] text-xs text-[#F1F5F9] flex items-center gap-2">
-                <i class="fa-solid fa-shield-halved text-[#38BDF8]"></i> Network & Cyber Security
+              <div class="p-2.5 rounded-lg border border-[#333333] bg-[#171717] text-xs text-[#FFFFFF] flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-[#FFFFFF]"></i> Network & Cyber Security
               </div>
-              <div class="p-2.5 rounded-lg border border-[#263244] bg-[#182235] text-xs text-[#F1F5F9] flex items-center gap-2">
-                <i class="fa-solid fa-laptop-code text-[#38BDF8]"></i> Full-Stack Web Development
+              <div class="p-2.5 rounded-lg border border-[#333333] bg-[#171717] text-xs text-[#FFFFFF] flex items-center gap-2">
+                <i class="fa-solid fa-laptop-code text-[#FFFFFF]"></i> Full-Stack Web Development
               </div>
-              <div class="p-2.5 rounded-lg border border-[#263244] bg-[#182235] text-xs text-[#F1F5F9] flex items-center gap-2">
-                <i class="fa-solid fa-bezier-curve text-[#38BDF8]"></i> UI/UX Design & HCI
+              <div class="p-2.5 rounded-lg border border-[#333333] bg-[#171717] text-xs text-[#FFFFFF] flex items-center gap-2">
+                <i class="fa-solid fa-bezier-curve text-[#FFFFFF]"></i> UI/UX Design & HCI
               </div>
             </div>
 
             <!-- Honors Badge -->
-            <div class="p-3 rounded-lg bg-[#182235] border border-[#263244] flex items-center gap-3 text-xs text-[#F1F5F9] mt-3">
-              <i class="fa-solid fa-medal text-[#38BDF8] text-base"></i>
+            <div class="p-3 rounded-lg bg-[#171717] border border-[#333333] flex items-center gap-3 text-xs text-[#FFFFFF] mt-3">
+              <i class="fa-solid fa-medal text-[#FFFFFF] text-base"></i>
               <span class="font-normal" data-i18n="eduHonor">เกียรตินิยม / ทุนการศึกษาและผลการเรียนดีเด่น สาขา ICT</span>
             </div>
           </div>
@@ -482,147 +480,147 @@
       <!-- =================================================================== -->
       <section id="skills" class="scroll-mt-20 reveal-on-scroll">
         <div class="mb-6">
-          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#38BDF8] mb-1">
-            <span class="h-1.5 w-1.5 rounded-full bg-[#38BDF8]"></span>
+          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#FFFFFF] mb-1">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#FFFFFF]"></span>
             <span data-i18n="skillsTitle">ทักษะความเชี่ยวชาญ</span>
           </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-[#F1F5F9] tracking-tight" data-i18n="skillsSubtitle">
+          <h2 class="text-xl sm:text-2xl font-bold text-[#FFFFFF] tracking-tight" data-i18n="skillsSubtitle">
             จัดหมวดหมู่ทักษะ 4 ด้านหลักเพื่อการพัฒนาดิจิทัลโซลูชันอย่างครบวงจร
           </h2>
-          <p class="text-xs font-mono text-[#94A3B8] mt-2">
-            <i class="fa-solid fa-circle-info text-[#38BDF8] mr-1"></i> คลิกที่ทักษะใดก็ได้เพื่อดูรายละเอียดและโครงงานจริงที่พัฒนาด้วยเทคโนโลยีนั้น
+          <p class="text-xs font-mono text-[#A3A3A3] mt-2">
+            <i class="fa-solid fa-circle-info text-[#FFFFFF] mr-1"></i> คลิกที่ทักษะใดก็ได้เพื่อดูรายละเอียดและโครงงานจริงที่พัฒนาด้วยเทคโนโลยีนั้น
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <!-- 1. Programming Languages -->
-          <div class="p-5 sm:p-6 rounded-xl dev-card bg-[#111827] border border-[#263244]">
+          <div class="p-5 sm:p-6 rounded-xl dev-card bg-[#1F1F1F] border border-[#333333]">
             <div class="flex items-center gap-3 mb-4">
-              <div class="h-8 w-8 rounded-lg bg-[#182235] border border-[#263244] flex items-center justify-center text-[#38BDF8] text-xs">
+              <div class="h-8 w-8 rounded-lg bg-[#171717] border border-[#333333] flex items-center justify-center text-[#FFFFFF] text-xs">
                 <i class="fa-solid fa-code"></i>
               </div>
-              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#F1F5F9]" data-i18n="catLang">ภาษาโปรแกรมมิ่ง (Languages)</h3>
+              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#FFFFFF]" data-i18n="catLang">ภาษาโปรแกรมมิ่ง (Languages)</h3>
             </div>
             <div class="space-y-3.5">
               <div class="cursor-pointer group" onclick="openSkillDetail('JavaScript')">
                 <div class="flex justify-between text-xs font-mono mb-1">
-                  <span class="text-[#F1F5F9] group-hover:text-[#38BDF8] transition">JavaScript (ES6+) / TypeScript</span>
-                  <span class="text-[#94A3B8]">90%</span>
+                  <span class="text-[#FFFFFF] group-hover:text-[#FFFFFF] transition">JavaScript (ES6+) / TypeScript</span>
+                  <span class="text-[#A3A3A3]">90%</span>
                 </div>
-                <div class="h-1.5 w-full bg-[#182235] rounded-full overflow-hidden">
-                  <div class="h-full bg-[#38BDF8] rounded-full group-hover:bg-[#7dd3fc] transition-colors" style="width: 90%"></div>
+                <div class="h-1.5 w-full bg-[#171717] rounded-full overflow-hidden">
+                  <div class="h-full bg-[#FFFFFF] rounded-full" style="width: 90%"></div>
                 </div>
               </div>
               <div class="cursor-pointer group" onclick="openSkillDetail('Python')">
                 <div class="flex justify-between text-xs font-mono mb-1">
-                  <span class="text-[#F1F5F9] group-hover:text-[#38BDF8] transition">Python</span>
-                  <span class="text-[#94A3B8]">85%</span>
+                  <span class="text-[#FFFFFF] group-hover:text-[#FFFFFF] transition">Python</span>
+                  <span class="text-[#A3A3A3]">85%</span>
                 </div>
-                <div class="h-1.5 w-full bg-[#182235] rounded-full overflow-hidden">
-                  <div class="h-full bg-[#38BDF8] rounded-full group-hover:bg-[#7dd3fc] transition-colors" style="width: 85%"></div>
+                <div class="h-1.5 w-full bg-[#171717] rounded-full overflow-hidden">
+                  <div class="h-full bg-[#FFFFFF] rounded-full" style="width: 85%"></div>
                 </div>
               </div>
               <div class="cursor-pointer group" onclick="openSkillDetail('SQL')">
                 <div class="flex justify-between text-xs font-mono mb-1">
-                  <span class="text-[#F1F5F9] group-hover:text-[#38BDF8] transition">SQL (PostgreSQL, SQLite, MySQL)</span>
-                  <span class="text-[#94A3B8]">88%</span>
+                  <span class="text-[#FFFFFF] group-hover:text-[#FFFFFF] transition">SQL (PostgreSQL, SQLite, MySQL)</span>
+                  <span class="text-[#A3A3A3]">88%</span>
                 </div>
-                <div class="h-1.5 w-full bg-[#182235] rounded-full overflow-hidden">
-                  <div class="h-full bg-[#38BDF8] rounded-full group-hover:bg-[#7dd3fc] transition-colors" style="width: 88%"></div>
+                <div class="h-1.5 w-full bg-[#171717] rounded-full overflow-hidden">
+                  <div class="h-full bg-[#FFFFFF] rounded-full" style="width: 88%"></div>
                 </div>
               </div>
               <div class="cursor-pointer group" onclick="openSkillDetail('C#')">
                 <div class="flex justify-between text-xs font-mono mb-1">
-                  <span class="text-[#F1F5F9] group-hover:text-[#38BDF8] transition">C# / Java</span>
-                  <span class="text-[#94A3B8]">75%</span>
+                  <span class="text-[#FFFFFF] group-hover:text-[#FFFFFF] transition">C# / Java</span>
+                  <span class="text-[#A3A3A3]">75%</span>
                 </div>
-                <div class="h-1.5 w-full bg-[#182235] rounded-full overflow-hidden">
-                  <div class="h-full bg-[#38BDF8] rounded-full group-hover:bg-[#7dd3fc] transition-colors" style="width: 75%"></div>
+                <div class="h-1.5 w-full bg-[#171717] rounded-full overflow-hidden">
+                  <div class="h-full bg-[#FFFFFF] rounded-full" style="width: 75%"></div>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- 2. Frontend Development -->
-          <div class="p-5 sm:p-6 rounded-xl dev-card bg-[#111827] border border-[#263244]">
+          <div class="p-5 sm:p-6 rounded-xl dev-card bg-[#1F1F1F] border border-[#333333]">
             <div class="flex items-center gap-3 mb-4">
-              <div class="h-8 w-8 rounded-lg bg-[#182235] border border-[#263244] flex items-center justify-center text-[#38BDF8] text-xs">
+              <div class="h-8 w-8 rounded-lg bg-[#171717] border border-[#333333] flex items-center justify-center text-[#FFFFFF] text-xs">
                 <i class="fa-solid fa-palette"></i>
               </div>
-              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#F1F5F9]" data-i18n="catFrontend">การพัฒนาส่วนหน้า (Frontend)</h3>
+              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#FFFFFF]" data-i18n="catFrontend">การพัฒนาส่วนหน้า (Frontend)</h3>
             </div>
             <div class="flex flex-wrap gap-2">
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('HTML5')">
-                <i class="fa-brands fa-html5 text-[#38BDF8]"></i> HTML5 & Semantic Web
+                <i class="fa-brands fa-html5 text-[#FFFFFF]"></i> HTML5 & Semantic Web
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Tailwind CSS')">
-                <i class="fa-brands fa-css3-alt text-[#38BDF8]"></i> CSS3 & Tailwind CSS
+                <i class="fa-brands fa-css3-alt text-[#FFFFFF]"></i> CSS3 & Tailwind CSS
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('React.js')">
-                <i class="fa-brands fa-react text-[#38BDF8]"></i> React.js & Next.js
+                <i class="fa-brands fa-react text-[#FFFFFF]"></i> React.js & Next.js
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Vite')">
-                <i class="fa-brands fa-vuejs text-[#38BDF8]"></i> Vue.js / Vite
+                <i class="fa-brands fa-vuejs text-[#FFFFFF]"></i> Vue.js / Vite
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Responsive Design')">
-                <i class="fa-solid fa-mobile-screen text-[#38BDF8]"></i> Responsive Web Design
+                <i class="fa-solid fa-mobile-screen text-[#FFFFFF]"></i> Responsive Web Design
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Web Accessibility')">
-                <i class="fa-solid fa-universal-access text-[#38BDF8]"></i> Web Accessibility (a11y)
+                <i class="fa-solid fa-universal-access text-[#FFFFFF]"></i> Web Accessibility (a11y)
               </span>
             </div>
           </div>
 
           <!-- 3. Backend & Database -->
-          <div class="p-5 sm:p-6 rounded-xl dev-card bg-[#111827] border border-[#263244]">
+          <div class="p-5 sm:p-6 rounded-xl dev-card bg-[#1F1F1F] border border-[#333333]">
             <div class="flex items-center gap-3 mb-4">
-              <div class="h-8 w-8 rounded-lg bg-[#182235] border border-[#263244] flex items-center justify-center text-[#38BDF8] text-xs">
+              <div class="h-8 w-8 rounded-lg bg-[#171717] border border-[#333333] flex items-center justify-center text-[#FFFFFF] text-xs">
                 <i class="fa-solid fa-server"></i>
               </div>
-              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#F1F5F9]" data-i18n="catBackend">ระบบหลังบ้านและฐานข้อมูล (Backend & DB)</h3>
+              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#FFFFFF]" data-i18n="catBackend">ระบบหลังบ้านและฐานข้อมูล (Backend & DB)</h3>
             </div>
             <div class="flex flex-wrap gap-2">
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Node.js')">
-                <i class="fa-brands fa-node-js text-[#38BDF8]"></i> Node.js & Express
+                <i class="fa-brands fa-node-js text-[#FFFFFF]"></i> Node.js & Express
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Cloudflare Workers')">
-                <i class="fa-solid fa-cloud text-[#38BDF8]"></i> Cloudflare Workers / D1 SQL
+                <i class="fa-solid fa-cloud text-[#FFFFFF]"></i> Cloudflare Workers / D1 SQL
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('PostgreSQL')">
-                <i class="fa-solid fa-database text-[#38BDF8]"></i> PostgreSQL / MySQL
+                <i class="fa-solid fa-database text-[#FFFFFF]"></i> PostgreSQL / MySQL
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('RESTful APIs')">
-                <i class="fa-solid fa-network-wired text-[#38BDF8]"></i> RESTful APIs & GraphQL
+                <i class="fa-solid fa-network-wired text-[#FFFFFF]"></i> RESTful APIs & GraphQL
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('JWT')">
-                <i class="fa-solid fa-key text-[#38BDF8]"></i> JWT & Security Architecture
+                <i class="fa-solid fa-key text-[#FFFFFF]"></i> JWT & Security Architecture
               </span>
             </div>
           </div>
 
           <!-- 4. Tools & DevOps -->
-          <div class="p-5 sm:p-6 rounded-xl dev-card bg-[#111827] border border-[#263244]">
+          <div class="p-5 sm:p-6 rounded-xl dev-card bg-[#1F1F1F] border border-[#333333]">
             <div class="flex items-center gap-3 mb-4">
-              <div class="h-8 w-8 rounded-lg bg-[#182235] border border-[#263244] flex items-center justify-center text-[#38BDF8] text-xs">
+              <div class="h-8 w-8 rounded-lg bg-[#171717] border border-[#333333] flex items-center justify-center text-[#FFFFFF] text-xs">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
               </div>
-              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#F1F5F9]" data-i18n="catTools">เครื่องมือและเดฟออปส์ (Tools & DevOps)</h3>
+              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#FFFFFF]" data-i18n="catTools">เครื่องมือและเดฟออปส์ (Tools & DevOps)</h3>
             </div>
             <div class="flex flex-wrap gap-2">
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Git')">
-                <i class="fa-brands fa-git-alt text-[#38BDF8]"></i> Git & GitHub Version Control
+                <i class="fa-brands fa-git-alt text-[#FFFFFF]"></i> Git & GitHub Version Control
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Docker')">
-                <i class="fa-brands fa-docker text-[#38BDF8]"></i> Docker Containerization
+                <i class="fa-brands fa-docker text-[#FFFFFF]"></i> Docker Containerization
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Cloudflare Pages')">
-                <i class="fa-solid fa-bolt text-[#38BDF8]"></i> Cloudflare Pages / R2 Storage
+                <i class="fa-solid fa-bolt text-[#FFFFFF]"></i> Cloudflare Pages / R2 Storage
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Figma')">
-                <i class="fa-brands fa-figma text-[#38BDF8]"></i> Figma UI/UX Prototyping
+                <i class="fa-brands fa-figma text-[#FFFFFF]"></i> Figma UI/UX Prototyping
               </span>
               <span class="tech-pill tech-pill-interactive" onclick="openSkillDetail('Linux')">
-                <i class="fa-solid fa-terminal text-[#38BDF8]"></i> Postman / VS Code / Linux
+                <i class="fa-solid fa-terminal text-[#FFFFFF]"></i> Postman / VS Code / Linux
               </span>
             </div>
           </div>
@@ -634,38 +632,38 @@
       <!-- =================================================================== -->
       <section id="experience" class="scroll-mt-20 reveal-on-scroll">
         <div class="mb-6">
-          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#38BDF8] mb-1">
-            <span class="h-1.5 w-1.5 rounded-full bg-[#38BDF8]"></span>
+          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#FFFFFF] mb-1">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#FFFFFF]"></span>
             <span data-i18n="expTitle">ประสบการณ์ทำงาน</span>
           </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-[#F1F5F9] tracking-tight" data-i18n="expSubtitle">
+          <h2 class="text-xl sm:text-2xl font-bold text-[#FFFFFF] tracking-tight" data-i18n="expSubtitle">
             ประวัติการฝึกงานและงานฟรีแลนซ์/Part-time ด้านการพัฒนาเว็บ
           </h2>
         </div>
 
-        <div class="relative pl-6 sm:pl-8 border-l border-[#263244] space-y-8">
+        <div class="relative pl-6 sm:pl-8 border-l border-[#333333] space-y-8">
           <!-- Timeline Item 1: Internship -->
           <div class="relative">
-            <div class="absolute -left-[29px] sm:-left-[37px] top-1.5 h-3 w-3 rounded-full border border-[#090D16] bg-[#38BDF8]"></div>
+            <div class="absolute -left-[29px] sm:-left-[37px] top-1.5 h-3 w-3 rounded-full border border-[#090909] bg-[#FFFFFF]"></div>
             
-            <div class="rounded-xl dev-card p-5 sm:p-6 bg-[#111827] border border-[#263244]">
+            <div class="rounded-xl dev-card p-5 sm:p-6 bg-[#1F1F1F] border border-[#333333]">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 mb-2">
                 <div class="flex items-center gap-2">
-                  <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-medium bg-[#182235] text-[#38BDF8] border border-[#263244]" data-i18n="internTag">
+                  <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-medium bg-[#171717] text-[#FFFFFF] border border-[#333333]" data-i18n="internTag">
                     งานฝึกงาน (Internship)
                   </span>
-                  <span class="text-xs text-[#94A3B8] font-mono">2024 (ภาคฤดูร้อน)</span>
+                  <span class="text-xs text-[#A3A3A3] font-mono">2024 (ภาคฤดูร้อน)</span>
                 </div>
-                <span class="text-xs font-mono text-[#94A3B8]">กรุงเทพมหานคร</span>
+                <span class="text-xs font-mono text-[#A3A3A3]">กรุงเทพมหานคร</span>
               </div>
 
-              <h3 class="text-sm sm:text-base font-semibold text-[#F1F5F9] mb-0.5">
+              <h3 class="text-sm sm:text-base font-semibold text-[#FFFFFF] mb-0.5">
                 Full-Stack Web Developer Intern
               </h3>
-              <p class="text-xs font-mono text-[#38BDF8] mb-3">
+              <p class="text-xs font-mono text-[#FFFFFF] mb-3">
                 TechSphere Solutions Co., Ltd.
               </p>
-              <ul class="text-xs sm:text-sm text-[#94A3B8] space-y-1.5 list-disc list-inside mb-4 leading-relaxed font-normal">
+              <ul class="text-xs sm:text-sm text-[#A3A3A3] space-y-1.5 list-disc list-inside mb-4 leading-relaxed font-normal">
                 <li>ร่วมออกแบบและพัฒนาเว็บแอปพลิเคชันภายในองค์กรด้วย Node.js, Express และ Tailwind CSS</li>
                 <li>สร้าง RESTful APIs สำหรับเชื่อมต่อฐานข้อมูล SQL และเพิ่มความเร็วในการตอบสนองระบบขึ้น 35%</li>
                 <li>ร่วมพัฒนา Responsive Dashboard และปรับปรุงความปลอดภัยการยืนยันตัวตนด้วย JWT</li>
@@ -681,26 +679,26 @@
 
           <!-- Timeline Item 2: Part-time / Freelance -->
           <div class="relative">
-            <div class="absolute -left-[29px] sm:-left-[37px] top-1.5 h-3 w-3 rounded-full border border-[#090D16] bg-[#38BDF8]"></div>
+            <div class="absolute -left-[29px] sm:-left-[37px] top-1.5 h-3 w-3 rounded-full border border-[#090909] bg-[#FFFFFF]"></div>
             
-            <div class="rounded-xl dev-card p-5 sm:p-6 bg-[#111827] border border-[#263244]">
+            <div class="rounded-xl dev-card p-5 sm:p-6 bg-[#1F1F1F] border border-[#333333]">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 mb-2">
                 <div class="flex items-center gap-2">
-                  <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-medium bg-[#182235] text-[#38BDF8] border border-[#263244]" data-i18n="partTimeTag">
+                  <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-medium bg-[#171717] text-[#FFFFFF] border border-[#333333]" data-i18n="partTimeTag">
                     งาน Part-time / Freelance
                   </span>
-                  <span class="text-xs text-[#94A3B8] font-mono">2565 – ปัจจุบัน</span>
+                  <span class="text-xs text-[#A3A3A3] font-mono">2565 – ปัจจุบัน</span>
                 </div>
-                <span class="text-xs font-mono text-[#94A3B8]">Remote / Bangkok</span>
+                <span class="text-xs font-mono text-[#A3A3A3]">Remote / Bangkok</span>
               </div>
 
-              <h3 class="text-sm sm:text-base font-semibold text-[#F1F5F9] mb-0.5">
+              <h3 class="text-sm sm:text-base font-semibold text-[#FFFFFF] mb-0.5">
                 Freelance Web Developer & UI Designer
               </h3>
-              <p class="text-xs font-mono text-[#38BDF8] mb-3">
+              <p class="text-xs font-mono text-[#FFFFFF] mb-3">
                 Independent Projects & SMEs
               </p>
-              <ul class="text-xs sm:text-sm text-[#94A3B8] space-y-1.5 list-disc list-inside mb-4 leading-relaxed font-normal">
+              <ul class="text-xs sm:text-sm text-[#A3A3A3] space-y-1.5 list-disc list-inside mb-4 leading-relaxed font-normal">
                 <li>ออกแบบ Landing Page และ Single-Page Portfolio สำหรับร้านค้าและบุคคลทั่วไปโดยเน้น Minimalist UI/UX</li>
                 <li>พัฒนาเว็บด้วยสถาปัตยกรรม Jamstack บน Cloudflare Pages ได้คะแนน Google Lighthouse 95+</li>
                 <li>ดูแลระบบและจัดส่งมอบงานตรงตามกำหนดเวลา 100%</li>
@@ -715,26 +713,26 @@
 
           <!-- Timeline Item 3: Academic / Teaching Assistant -->
           <div class="relative">
-            <div class="absolute -left-[29px] sm:-left-[37px] top-1.5 h-3 w-3 rounded-full border border-[#090D16] bg-[#38BDF8]"></div>
+            <div class="absolute -left-[29px] sm:-left-[37px] top-1.5 h-3 w-3 rounded-full border border-[#090909] bg-[#FFFFFF]"></div>
             
-            <div class="rounded-xl dev-card p-5 sm:p-6 bg-[#111827] border border-[#263244]">
+            <div class="rounded-xl dev-card p-5 sm:p-6 bg-[#1F1F1F] border border-[#333333]">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 mb-2">
                 <div class="flex items-center gap-2">
-                  <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-medium bg-[#182235] text-[#38BDF8] border border-[#263244]" data-i18n="academicTag">
+                  <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-medium bg-[#171717] text-[#FFFFFF] border border-[#333333]" data-i18n="academicTag">
                     กิจกรรมมหาวิทยาลัย
                   </span>
-                  <span class="text-xs text-[#94A3B8] font-mono">2566 – 2567</span>
+                  <span class="text-xs text-[#A3A3A3] font-mono">2566 – 2567</span>
                 </div>
-                <span class="text-xs font-mono text-[#94A3B8]">มหาวิทยาลัยศรีปทุม</span>
+                <span class="text-xs font-mono text-[#A3A3A3]">มหาวิทยาลัยศรีปทุม</span>
               </div>
 
-              <h3 class="text-sm sm:text-base font-semibold text-[#F1F5F9] mb-0.5">
+              <h3 class="text-sm sm:text-base font-semibold text-[#FFFFFF] mb-0.5">
                 SPU ICT Lab Assistant & Peer Tutor
               </h3>
-              <p class="text-xs font-mono text-[#38BDF8] mb-3">
+              <p class="text-xs font-mono text-[#FFFFFF] mb-3">
                 Faculty of Information Technology, SPU
               </p>
-              <p class="text-xs sm:text-sm text-[#94A3B8] leading-relaxed font-normal">
+              <p class="text-xs sm:text-sm text-[#A3A3A3] leading-relaxed font-normal">
                 ช่วยดูแลห้องปฏิบัติการคอมพิวเตอร์และให้คำแนะนำแก่นักศึกษารุ่นน้องในวิชาการเขียนโปรแกรมพื้นฐานและโครงสร้างข้อมูล
               </p>
             </div>
@@ -747,88 +745,88 @@
       <!-- =================================================================== -->
       <section id="activity-timeline" class="scroll-mt-20 reveal-on-scroll">
         <div class="mb-6">
-          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#38BDF8] mb-1">
-            <span class="h-1.5 w-1.5 rounded-full bg-[#38BDF8]"></span>
+          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#FFFFFF] mb-1">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#FFFFFF]"></span>
             <span>Learning & Activity Timeline</span>
           </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-[#F1F5F9] tracking-tight">
+          <h2 class="text-xl sm:text-2xl font-bold text-[#FFFFFF] tracking-tight">
             เส้นทางการเรียนรู้และพัฒนาทักษะ จากจุดเริ่มต้นสู่โปรเจกต์จริง
           </h2>
-          <p class="text-xs font-mono text-[#94A3B8] mt-1">
+          <p class="text-xs font-mono text-[#A3A3A3] mt-1">
             วิวัฒนาการทักษะอย่างเป็นระบบตลอด 4 ปี ณ SPU ICT มุ่งมั่นสู่ความเป็นมืออาชีพ
           </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <!-- Step 1: 2021 -->
-          <div class="p-5 rounded-xl dev-card bg-[#111827] border border-[#263244] flex flex-col justify-between">
+          <div class="p-5 rounded-xl dev-card bg-[#1F1F1F] border border-[#333333] flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono font-bold text-[#38BDF8] px-2 py-0.5 rounded bg-[#182235] border border-[#263244]">2021</span>
-                <span class="text-[11px] font-mono text-[#94A3B8]">ปี 1 (Year 1)</span>
+                <span class="text-xs font-mono font-bold text-[#FFFFFF] px-2 py-0.5 rounded bg-[#171717] border border-[#333333]">2021</span>
+                <span class="text-[11px] font-mono text-[#A3A3A3]">ปี 1 (Year 1)</span>
               </div>
-              <h3 class="text-sm font-semibold text-[#F1F5F9] mb-1">พื้นฐานการเขียนโปรแกรม</h3>
-              <p class="text-xs text-[#94A3B8] leading-relaxed mb-3">
+              <h3 class="text-sm font-semibold text-[#FFFFFF] mb-1">พื้นฐานการเขียนโปรแกรม</h3>
+              <p class="text-xs text-[#A3A3A3] leading-relaxed mb-3">
                 เริ่มต้นศึกษาพื้นฐาน Computer Science, อัลกอริทึม, โครงสร้างข้อมูล และการคิดเชิงตรรกะด้วย C และ Python
               </p>
             </div>
             <div class="flex flex-wrap gap-1 text-[11px]">
-              <span class="px-2 py-0.5 rounded bg-[#182235] text-[#38BDF8] border border-[#263244]">C / Python</span>
-              <span class="px-2 py-0.5 rounded bg-[#182235] text-[#94A3B8] border border-[#263244]">Data Structures</span>
+              <span class="px-2 py-0.5 rounded bg-[#171717] text-[#FFFFFF] border border-[#333333]">C / Python</span>
+              <span class="px-2 py-0.5 rounded bg-[#171717] text-[#A3A3A3] border border-[#333333]">Data Structures</span>
             </div>
           </div>
 
           <!-- Step 2: 2022 -->
-          <div class="p-5 rounded-xl dev-card bg-[#111827] border border-[#263244] flex flex-col justify-between">
+          <div class="p-5 rounded-xl dev-card bg-[#1F1F1F] border border-[#333333] flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono font-bold text-[#38BDF8] px-2 py-0.5 rounded bg-[#182235] border border-[#263244]">2022</span>
-                <span class="text-[11px] font-mono text-[#94A3B8]">ปี 2 (Year 2)</span>
+                <span class="text-xs font-mono font-bold text-[#FFFFFF] px-2 py-0.5 rounded bg-[#171717] border border-[#333333]">2022</span>
+                <span class="text-[11px] font-mono text-[#A3A3A3]">ปี 2 (Year 2)</span>
               </div>
-              <h3 class="text-sm font-semibold text-[#F1F5F9] mb-1">สถาปัตยกรรมเว็บ & ฐานข้อมูล</h3>
-              <p class="text-xs text-[#94A3B8] leading-relaxed mb-3">
+              <h3 class="text-sm font-semibold text-[#FFFFFF] mb-1">สถาปัตยกรรมเว็บ & ฐานข้อมูล</h3>
+              <p class="text-xs text-[#A3A3A3] leading-relaxed mb-3">
                 เจาะลึก Web Standards (HTML5/CSS3/JS ES6+), ระบบฐานข้อมูลเชิงสัมพันธ์ SQL, และออกแบบ UI/UX ผ่าน Figma
               </p>
             </div>
             <div class="flex flex-wrap gap-1 text-[11px]">
-              <span class="px-2 py-0.5 rounded bg-[#182235] text-[#38BDF8] border border-[#263244]">JavaScript</span>
-              <span class="px-2 py-0.5 rounded bg-[#182235] text-[#38BDF8] border border-[#263244]">SQL</span>
+              <span class="px-2 py-0.5 rounded bg-[#171717] text-[#FFFFFF] border border-[#333333]">JavaScript</span>
+              <span class="px-2 py-0.5 rounded bg-[#171717] text-[#FFFFFF] border border-[#333333]">SQL</span>
             </div>
           </div>
 
           <!-- Step 3: 2023 -->
-          <div class="p-5 rounded-xl dev-card bg-[#111827] border border-[#263244] flex flex-col justify-between">
+          <div class="p-5 rounded-xl dev-card bg-[#1F1F1F] border border-[#333333] flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-mono font-bold text-[#38BDF8] px-2 py-0.5 rounded bg-[#182235] border border-[#263244]">2023</span>
-                <span class="text-[11px] font-mono text-[#94A3B8]">ปี 3 (Year 3)</span>
+                <span class="text-xs font-mono font-bold text-[#FFFFFF] px-2 py-0.5 rounded bg-[#171717] border border-[#333333]">2023</span>
+                <span class="text-[11px] font-mono text-[#A3A3A3]">ปี 3 (Year 3)</span>
               </div>
-              <h3 class="text-sm font-semibold text-[#F1F5F9] mb-1">Full-Stack & Cloud Edge</h3>
-              <p class="text-xs text-[#94A3B8] leading-relaxed mb-3">
+              <h3 class="text-sm font-semibold text-[#FFFFFF] mb-1">Full-Stack & Cloud Edge</h3>
+              <p class="text-xs text-[#A3A3A3] leading-relaxed mb-3">
                 พัฒนา Web Applications เต็มรูปแบบด้วย React, Node.js, Express, เชื่อมต่อ Cloudflare และความปลอดภัยไซเบอร์
               </p>
             </div>
             <div class="flex flex-wrap gap-1 text-[11px]">
-              <span class="px-2 py-0.5 rounded bg-[#182235] text-[#38BDF8] border border-[#263244]">React</span>
-              <span class="px-2 py-0.5 rounded bg-[#182235] text-[#38BDF8] border border-[#263244]">Cloudflare</span>
+              <span class="px-2 py-0.5 rounded bg-[#171717] text-[#FFFFFF] border border-[#333333]">React</span>
+              <span class="px-2 py-0.5 rounded bg-[#171717] text-[#FFFFFF] border border-[#333333]">Cloudflare</span>
             </div>
           </div>
 
           <!-- Step 4: 2024 - Present -->
-          <div class="p-5 rounded-xl dev-card bg-[#111827] border border-[#38BDF8]/40 shadow-lg shadow-sky-500/5 flex flex-col justify-between">
+          <div class="p-5 rounded-xl dev-card bg-[#1F1F1F] border border-[#FFFFFF]/40 shadow-xl flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
                 <span class="text-xs font-mono font-bold text-emerald-400 px-2 py-0.5 rounded bg-emerald-950/40 border border-emerald-500/30">2024–ปัจจุบัน</span>
                 <span class="text-[11px] font-mono text-emerald-400">ปี 4 (Senior)</span>
               </div>
-              <h3 class="text-sm font-semibold text-[#F1F5F9] mb-1">Enterprise Solutions & Capstone</h3>
-              <p class="text-xs text-[#94A3B8] leading-relaxed mb-3">
+              <h3 class="text-sm font-semibold text-[#FFFFFF] mb-1">Enterprise Solutions & Capstone</h3>
+              <p class="text-xs text-[#A3A3A3] leading-relaxed mb-3">
                 ฝึกงานจริงด้าน Full-Stack, พัฒนาระบบด้วย Docker, Cloudflare D1/R2, และโครงงานจบ SPU ICT Capstone
               </p>
             </div>
             <div class="flex flex-wrap gap-1 text-[11px]">
-              <span class="px-2 py-0.5 rounded bg-[#182235] text-emerald-400 border border-emerald-500/30">D1 / R2 Edge</span>
-              <span class="px-2 py-0.5 rounded bg-[#182235] text-[#38BDF8] border border-[#263244]">Capstone 100%</span>
+              <span class="px-2 py-0.5 rounded bg-[#171717] text-emerald-400 border border-emerald-500/30">D1 / R2 Edge</span>
+              <span class="px-2 py-0.5 rounded bg-[#171717] text-[#FFFFFF] border border-[#333333]">Capstone 100%</span>
             </div>
           </div>
         </div>
@@ -840,11 +838,11 @@
       <section id="projects" class="scroll-mt-20 reveal-on-scroll">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
           <div>
-            <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#38BDF8] mb-1">
-              <span class="h-1.5 w-1.5 rounded-full bg-[#38BDF8]"></span>
+            <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#FFFFFF] mb-1">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#FFFFFF]"></span>
               <span data-i18n="projectsTitle">ผลงานของฉัน</span>
             </div>
-            <h2 class="text-xl sm:text-2xl font-bold text-[#F1F5F9] tracking-tight" data-i18n="projectsSubtitle">
+            <h2 class="text-xl sm:text-2xl font-bold text-[#FFFFFF] tracking-tight" data-i18n="projectsSubtitle">
               โครงงานจริงที่ออกแบบและพัฒนาด้วยสถาปัตยกรรมที่ทันสมัย
             </h2>
           </div>
@@ -857,16 +855,16 @@
 
         <!-- Category Filters -->
         <div class="flex flex-wrap items-center gap-2 mb-6">
-          <button onclick="renderProjects('all')" data-filter="all" class="project-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#38BDF8] text-[#090D16] transition shadow-sm" data-i18n="filterAll">
+          <button onclick="renderProjects('all')" data-filter="all" class="project-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#FFFFFF] text-[#090909] transition shadow-sm border border-[#FFFFFF]" data-i18n="filterAll">
             ทั้งหมด
           </button>
-          <button onclick="renderProjects('fullstack')" data-filter="fullstack" class="project-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#94A3B8] hover:text-[#F1F5F9] border border-[#263244] bg-[#182235] hover:border-[#38BDF8]/40 transition" data-i18n="filterFullStack">
+          <button onclick="renderProjects('fullstack')" data-filter="fullstack" class="project-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#A3A3A3] hover:text-[#FFFFFF] border border-[#333333] bg-[#171717] hover:border-[#666666] transition" data-i18n="filterFullStack">
             Full-Stack
           </button>
-          <button onclick="renderProjects('frontend')" data-filter="frontend" class="project-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#94A3B8] hover:text-[#F1F5F9] border border-[#263244] bg-[#182235] hover:border-[#38BDF8]/40 transition" data-i18n="filterFrontend">
+          <button onclick="renderProjects('frontend')" data-filter="frontend" class="project-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#A3A3A3] hover:text-[#FFFFFF] border border-[#333333] bg-[#171717] hover:border-[#666666] transition" data-i18n="filterFrontend">
             Frontend
           </button>
-          <button onclick="renderProjects('backend')" data-filter="backend" class="project-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#94A3B8] hover:text-[#F1F5F9] border border-[#263244] bg-[#182235] hover:border-[#38BDF8]/40 transition" data-i18n="filterBackend">
+          <button onclick="renderProjects('backend')" data-filter="backend" class="project-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#A3A3A3] hover:text-[#FFFFFF] border border-[#333333] bg-[#171717] hover:border-[#666666] transition" data-i18n="filterBackend">
             Backend
           </button>
         </div>
@@ -881,11 +879,11 @@
       <section id="certifications" class="scroll-mt-20 reveal-on-scroll">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
           <div>
-            <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#38BDF8] mb-1">
-              <span class="h-1.5 w-1.5 rounded-full bg-[#38BDF8]"></span>
+            <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#FFFFFF] mb-1">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#FFFFFF]"></span>
               <span data-i18n="certsTitle">การฝึกอบรม & ใบรับรอง</span>
             </div>
-            <h2 class="text-xl sm:text-2xl font-bold text-[#F1F5F9] tracking-tight" data-i18n="certsSubtitle">
+            <h2 class="text-xl sm:text-2xl font-bold text-[#FFFFFF] tracking-tight" data-i18n="certsSubtitle">
               วุฒิบัตรและการอบรมเพิ่มพูนทักษะทางวิชาชีพด้านเทคโนโลยีสารสนเทศ
             </h2>
           </div>
@@ -903,30 +901,30 @@
       <!-- =================================================================== -->
       <!-- CLOUDFLARE ARCHITECTURE SECTION                                     -->
       <!-- =================================================================== -->
-      <section class="rounded-xl dev-card p-6 bg-[#111827] border border-[#263244]">
+      <section class="rounded-xl dev-card p-6 bg-[#1F1F1F] border border-[#333333]">
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
           <div class="flex items-start gap-4">
-            <div class="h-10 w-10 rounded-lg bg-[#182235] border border-[#263244] text-[#38BDF8] flex items-center justify-center text-lg flex-shrink-0">
+            <div class="h-10 w-10 rounded-lg bg-[#171717] border border-[#333333] text-[#FFFFFF] flex items-center justify-center text-lg flex-shrink-0">
               <i class="fa-solid fa-cloud"></i>
             </div>
             <div>
-              <h3 class="text-sm font-semibold text-[#F1F5F9]" data-i18n="cloudflareReadyTitle">
+              <h3 class="text-sm font-semibold text-[#FFFFFF]" data-i18n="cloudflareReadyTitle">
                 Cloudflare Ready Architecture
               </h3>
-              <p class="text-xs text-[#94A3B8] mt-1 font-mono" data-i18n="cloudflareDesc">
+              <p class="text-xs text-[#A3A3A3] mt-1 font-mono" data-i18n="cloudflareDesc">
                 รองรับ Cloudflare Pages, D1 Database SQL, R2 Object Storage และ Pages Functions อย่างสมบูรณ์
               </p>
             </div>
           </div>
 
           <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
-            <span class="px-2.5 py-1 rounded bg-[#182235] border border-[#263244] text-emerald-400 font-medium">
+            <span class="px-2.5 py-1 rounded bg-[#171717] border border-[#333333] text-emerald-400 font-medium">
               wrangler.toml ✓
             </span>
-            <span class="px-2.5 py-1 rounded bg-[#182235] border border-[#263244] text-emerald-400 font-medium">
+            <span class="px-2.5 py-1 rounded bg-[#171717] border border-[#333333] text-emerald-400 font-medium">
               schema.sql ✓
             </span>
-            <span class="px-2.5 py-1 rounded bg-[#182235] border border-[#263244] text-[#38BDF8] font-medium">
+            <span class="px-2.5 py-1 rounded bg-[#171717] border border-[#333333] text-[#FFFFFF] font-medium">
               D1 & R2 Ready ✓
             </span>
           </div>
@@ -936,10 +934,10 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="border-t border-[#263244] py-8 px-4 sm:px-8 text-center text-xs font-mono text-[#94A3B8]">
+    <footer class="border-t border-[#333333] py-8 px-4 sm:px-8 text-center text-xs font-mono text-[#A3A3A3]">
       <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
         <span>Khajonphan Phakdee — SPU ICT Portfolio</span>
-        <span>Modern Minimalist Edition • Cloudflare Pages</span>
+        <span>Dark & White Minimalist Edition • Cloudflare Pages</span>
       </div>
     </footer>
   </div>
@@ -947,11 +945,11 @@
   <!-- =================================================================== -->
   <!-- MODAL: PROJECT ADD / EDIT                                           -->
   <!-- =================================================================== -->
-  <div id="project-modal" class="fixed inset-0 z-50 bg-[#090D16]/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="animate-modal-in bg-[#111827] border border-[#263244] rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 border-b border-[#263244] mb-4">
-        <h3 id="project-modal-title" class="text-xs font-semibold uppercase tracking-wider text-[#F1F5F9]">เพิ่มผลงานใหม่</h3>
-        <button onclick="closeProjectModal()" class="text-[#94A3B8] hover:text-[#F1F5F9] transition">
+  <div id="project-modal" class="fixed inset-0 z-50 bg-[#090909]/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="animate-modal-in bg-[#1F1F1F] border border-[#333333] rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-[#333333] mb-4">
+        <h3 id="project-modal-title" class="text-xs font-semibold uppercase tracking-wider text-[#FFFFFF]">เพิ่มผลงานใหม่</h3>
+        <button onclick="closeProjectModal()" class="text-[#A3A3A3] hover:text-[#FFFFFF] transition">
           <i class="fa-solid fa-xmark text-base"></i>
         </button>
       </div>
@@ -960,18 +958,18 @@
         <input type="hidden" id="project-id-input" />
 
         <div>
-          <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblTitleTH">ชื่อผลงาน (ภาษาไทย)</label>
-          <input type="text" id="project-title-th" required class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+          <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblTitleTH">ชื่อผลงาน (ภาษาไทย)</label>
+          <input type="text" id="project-title-th" required class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
         </div>
 
         <div>
-          <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblTitleEN">ชื่อผลงาน (English)</label>
-          <input type="text" id="project-title-en" class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+          <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblTitleEN">ชื่อผลงาน (English)</label>
+          <input type="text" id="project-title-en" class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
         </div>
 
         <div>
-          <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblCategory">ประเภทผลงาน</label>
-          <select id="project-category" class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]">
+          <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblCategory">ประเภทผลงาน</label>
+          <select id="project-category" class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]">
             <option value="fullstack">Full-Stack</option>
             <option value="frontend">Frontend</option>
             <option value="backend">Backend</option>
@@ -979,41 +977,41 @@
         </div>
 
         <div>
-          <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblDescTH">รายละเอียด (ภาษาไทย)</label>
-          <textarea id="project-desc-th" rows="3" required class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]"></textarea>
+          <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblDescTH">รายละเอียด (ภาษาไทย)</label>
+          <textarea id="project-desc-th" rows="3" required class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]"></textarea>
         </div>
 
         <div>
-          <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblDescEN">รายละเอียด (English)</label>
-          <textarea id="project-desc-en" rows="3" class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]"></textarea>
+          <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblDescEN">รายละเอียด (English)</label>
+          <textarea id="project-desc-en" rows="3" class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]"></textarea>
         </div>
 
         <div>
-          <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblTech">เทคโนโลยีที่ใช้ (คั่นด้วยจุลภาค เช่น React, Tailwind, D1)</label>
-          <input type="text" id="project-tech" placeholder="React, Node.js, D1" class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+          <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblTech">เทคโนโลยีที่ใช้ (คั่นด้วยจุลภาค เช่น React, Tailwind, D1)</label>
+          <input type="text" id="project-tech" placeholder="React, Node.js, D1" class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblDemoUrl">Demo URL</label>
-            <input type="url" id="project-demo-url" placeholder="https://..." class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+            <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblDemoUrl">Demo URL</label>
+            <input type="url" id="project-demo-url" placeholder="https://..." class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
           </div>
           <div>
-            <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblGithubUrl">GitHub Repo URL</label>
-            <input type="url" id="project-github-url" placeholder="https://github.com/..." class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+            <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblGithubUrl">GitHub Repo URL</label>
+            <input type="url" id="project-github-url" placeholder="https://github.com/..." class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
           </div>
         </div>
 
         <!-- Project Image Selector -->
         <div>
-          <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblProjectImg">เลือกรูปภาพผลงานจากเครื่อง (PNG/JPG)</label>
-          <input type="file" id="project-img-input" accept="image/*" class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#94A3B8] file:mr-3 file:py-1 file:px-2 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-[#38BDF8] file:text-[#090D16]" />
+          <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblProjectImg">เลือกรูปภาพผลงานจากเครื่อง (PNG/JPG)</label>
+          <input type="file" id="project-img-input" accept="image/*" class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#A3A3A3] file:mr-3 file:py-1 file:px-2 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-[#FFFFFF] file:text-[#090909]" />
           <div id="project-img-preview-container" class="mt-2 hidden">
-            <img id="project-img-preview" src="" alt="Preview" class="h-28 w-full object-cover rounded-lg border border-[#263244]" />
+            <img id="project-img-preview" src="" alt="Preview" class="bright-visual h-28 w-full object-cover rounded-lg border border-[#333333]" />
           </div>
         </div>
 
-        <div class="pt-4 border-t border-[#263244] flex items-center justify-end gap-2">
+        <div class="pt-4 border-t border-[#333333] flex items-center justify-end gap-2">
           <button type="button" onclick="closeProjectModal()" class="btn-secondary" data-i18n="cancelBtn">
             ยกเลิก
           </button>
@@ -1028,11 +1026,11 @@
   <!-- =================================================================== -->
   <!-- MODAL: CERTIFICATE ADD / EDIT                                       -->
   <!-- =================================================================== -->
-  <div id="cert-modal" class="fixed inset-0 z-50 bg-[#090D16]/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="animate-modal-in bg-[#111827] border border-[#263244] rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 border-b border-[#263244] mb-4">
-        <h3 id="cert-modal-title" class="text-xs font-semibold uppercase tracking-wider text-[#F1F5F9]">เพิ่มใบรับรองใหม่</h3>
-        <button onclick="closeCertModal()" class="text-[#94A3B8] hover:text-[#F1F5F9] transition">
+  <div id="cert-modal" class="fixed inset-0 z-50 bg-[#090909]/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="animate-modal-in bg-[#1F1F1F] border border-[#333333] rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-[#333333] mb-4">
+        <h3 id="cert-modal-title" class="text-xs font-semibold uppercase tracking-wider text-[#FFFFFF]">เพิ่มใบรับรองใหม่</h3>
+        <button onclick="closeCertModal()" class="text-[#A3A3A3] hover:text-[#FFFFFF] transition">
           <i class="fa-solid fa-xmark text-base"></i>
         </button>
       </div>
@@ -1041,44 +1039,44 @@
         <input type="hidden" id="cert-id-input" />
 
         <div>
-          <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblTitleTH">ชื่อใบรับรอง / การอบรม (ภาษาไทย)</label>
-          <input type="text" id="cert-title-th" required class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+          <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblTitleTH">ชื่อใบรับรอง / การอบรม (ภาษาไทย)</label>
+          <input type="text" id="cert-title-th" required class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
         </div>
 
         <div>
-          <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblTitleEN">ชื่อใบรับรอง / การอบรม (English)</label>
-          <input type="text" id="cert-title-en" class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+          <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblTitleEN">ชื่อใบรับรอง / การอบรม (English)</label>
+          <input type="text" id="cert-title-en" class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblIssuerTH">ผู้ออกใบรับรอง (ภาษาไทย)</label>
-            <input type="text" id="cert-issuer-th" required class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+            <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblIssuerTH">ผู้ออกใบรับรอง (ภาษาไทย)</label>
+            <input type="text" id="cert-issuer-th" required class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
           </div>
           <div>
-            <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblIssuerEN">ผู้ออกใบรับรอง (English)</label>
-            <input type="text" id="cert-issuer-en" class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+            <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblIssuerEN">ผู้ออกใบรับรอง (English)</label>
+            <input type="text" id="cert-issuer-en" class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblIssueDate">วันที่/ปีที่ได้รับ (เช่น 2024)</label>
-            <input type="text" id="cert-issued-date" required placeholder="2024" class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+            <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblIssueDate">วันที่/ปีที่ได้รับ (เช่น 2024)</label>
+            <input type="text" id="cert-issued-date" required placeholder="2024" class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
           </div>
           <div>
-            <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblCredId">รหัสใบรับรอง (Credential ID)</label>
-            <input type="text" id="cert-credential-id" placeholder="CF-DEV-001" class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#F1F5F9] focus:outline-none focus:border-[#38BDF8]" />
+            <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblCredId">รหัสใบรับรอง (Credential ID)</label>
+            <input type="text" id="cert-credential-id" placeholder="CF-DEV-001" class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#FFFFFF] focus:outline-none focus:border-[#FFFFFF]" />
           </div>
         </div>
 
         <div>
-          <label class="block font-medium text-[#94A3B8] mb-1" data-i18n="lblCertPdf">เลือกไฟล์ PDF ใบรับรองจากเครื่อง</label>
-          <input type="file" id="cert-pdf-input" accept="application/pdf" class="w-full px-3 py-2 rounded-lg border border-[#263244] bg-[#090D16] text-[#94A3B8] file:mr-3 file:py-1 file:px-2 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-[#38BDF8] file:text-[#090D16]" />
-          <span id="cert-pdf-name" class="block mt-1 text-[11px] font-mono text-[#94A3B8]"></span>
+          <label class="block font-medium text-[#A3A3A3] mb-1" data-i18n="lblCertPdf">เลือกไฟล์ PDF ใบรับรองจากเครื่อง</label>
+          <input type="file" id="cert-pdf-input" accept="application/pdf" class="w-full px-3 py-2 rounded-lg border border-[#333333] bg-[#090909] text-[#A3A3A3] file:mr-3 file:py-1 file:px-2 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-[#FFFFFF] file:text-[#090909]" />
+          <span id="cert-pdf-name" class="block mt-1 text-[11px] font-mono text-[#A3A3A3]"></span>
         </div>
 
-        <div class="pt-4 border-t border-[#263244] flex items-center justify-end gap-2">
+        <div class="pt-4 border-t border-[#333333] flex items-center justify-end gap-2">
           <button type="button" onclick="closeCertModal()" class="btn-secondary" data-i18n="cancelBtn">
             ยกเลิก
           </button>
@@ -1093,12 +1091,12 @@
   <!-- =================================================================== -->
   <!-- MODAL: PDF VIEWER                                                   -->
   <!-- =================================================================== -->
-  <div id="pdf-viewer-modal" class="fixed inset-0 z-50 bg-[#090D16]/90 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="animate-modal-in bg-[#111827] border border-[#263244] rounded-2xl max-w-4xl w-full h-[85vh] flex flex-col p-5 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 border-b border-[#263244] mb-3">
+  <div id="pdf-viewer-modal" class="fixed inset-0 z-50 bg-[#090909]/90 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="animate-modal-in bg-[#1F1F1F] border border-[#333333] rounded-2xl max-w-4xl w-full h-[85vh] flex flex-col p-5 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-[#333333] mb-3">
         <div class="flex items-center gap-2">
-          <i class="fa-solid fa-file-pdf text-[#38BDF8]"></i>
-          <h3 id="pdf-viewer-title" class="text-xs font-semibold text-[#F1F5F9] truncate">
+          <i class="fa-solid fa-file-pdf text-[#FFFFFF]"></i>
+          <h3 id="pdf-viewer-title" class="text-xs font-semibold text-[#FFFFFF] truncate">
             ตัวอย่างเอกสารใบรับรอง (PDF Preview)
           </h3>
         </div>
@@ -1110,14 +1108,14 @@
           <a id="pdf-download-link" href="#" class="btn-accent py-1 px-3 text-xs" data-i18n="downloadPdf">
             ดาวน์โหลด PDF
           </a>
-          <button onclick="closePdfViewer()" class="p-1 text-[#94A3B8] hover:text-[#F1F5F9] transition">
+          <button onclick="closePdfViewer()" class="p-1 text-[#A3A3A3] hover:text-[#FFFFFF] transition">
             <i class="fa-solid fa-xmark text-base"></i>
           </button>
         </div>
       </div>
 
       <!-- PDF Frame / Fallback -->
-      <div class="flex-1 w-full bg-[#090D16] rounded-xl overflow-hidden relative border border-[#263244]">
+      <div class="flex-1 w-full bg-[#090909] rounded-xl overflow-hidden relative border border-[#333333]">
         <iframe id="pdf-viewer-frame" src="" class="w-full h-full border-0 hidden"></iframe>
         <div id="pdf-viewer-fallback" class="w-full h-full flex items-center justify-center"></div>
       </div>
@@ -1127,31 +1125,31 @@
   <!-- =================================================================== -->
   <!-- MODAL: INTERACTIVE SKILL DETAIL & MATCHING REAL PROJECTS            -->
   <!-- =================================================================== -->
-  <div id="skill-detail-modal" class="fixed inset-0 z-50 bg-[#090D16]/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="animate-modal-in bg-[#111827] border border-[#263244] rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 border-b border-[#263244] mb-4">
+  <div id="skill-detail-modal" class="fixed inset-0 z-50 bg-[#090909]/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="animate-modal-in bg-[#1F1F1F] border border-[#333333] rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-[#333333] mb-4">
         <div class="flex items-center gap-2.5">
-          <div class="h-8 w-8 rounded-lg bg-[#182235] border border-[#263244] flex items-center justify-center text-[#38BDF8] text-sm">
+          <div class="h-8 w-8 rounded-lg bg-[#171717] border border-[#333333] flex items-center justify-center text-[#FFFFFF] text-sm">
             <i id="skill-modal-icon" class="fa-solid fa-code"></i>
           </div>
           <div>
-            <h3 id="skill-modal-name" class="text-sm font-semibold text-[#F1F5F9]">Skill Details</h3>
-            <span id="skill-modal-category" class="text-[11px] font-mono text-[#38BDF8]">Category</span>
+            <h3 id="skill-modal-name" class="text-sm font-semibold text-[#FFFFFF]">Skill Details</h3>
+            <span id="skill-modal-category" class="text-[11px] font-mono text-[#A3A3A3]">Category</span>
           </div>
         </div>
-        <button onclick="closeSkillDetailModal()" class="text-[#94A3B8] hover:text-[#F1F5F9] transition">
+        <button onclick="closeSkillDetailModal()" class="text-[#A3A3A3] hover:text-[#FFFFFF] transition">
           <i class="fa-solid fa-xmark text-base"></i>
         </button>
       </div>
 
       <div class="space-y-4">
-        <p id="skill-modal-desc" class="text-xs text-[#94A3B8] leading-relaxed">
+        <p id="skill-modal-desc" class="text-xs text-[#A3A3A3] leading-relaxed">
           Skill description...
         </p>
 
         <div>
-          <h4 class="text-xs font-mono font-medium uppercase tracking-wider text-[#94A3B8] mb-2 flex items-center gap-1.5">
-            <i class="fa-solid fa-cubes text-[#38BDF8]"></i>
+          <h4 class="text-xs font-mono font-medium uppercase tracking-wider text-[#A3A3A3] mb-2 flex items-center gap-1.5">
+            <i class="fa-solid fa-cubes text-[#FFFFFF]"></i>
             <span>โครงงานจริงที่พัฒนาด้วยเทคโนโลยีนี้ (Matching Projects)</span>
           </h4>
           <div id="skill-modal-projects" class="space-y-2">
@@ -1160,7 +1158,7 @@
         </div>
       </div>
 
-      <div class="pt-4 mt-5 border-t border-[#263244] flex justify-end">
+      <div class="pt-4 mt-5 border-t border-[#333333] flex justify-end">
         <button type="button" onclick="closeSkillDetailModal()" class="btn-secondary py-1.5 px-4 text-xs">
           ปิดหน้าต่าง (Close)
         </button>
@@ -1171,15 +1169,15 @@
   <!-- =================================================================== -->
   <!-- MODAL: COMMAND MENU / COMMAND PALETTE (CTRL + K)                    -->
   <!-- =================================================================== -->
-  <div id="command-menu-modal" class="fixed inset-0 z-50 bg-[#090D16]/85 backdrop-blur-sm hidden flex items-start justify-center pt-20 px-4" onclick="handleCommandBackdropClick(event)">
+  <div id="command-menu-modal" class="fixed inset-0 z-50 bg-[#090909]/85 backdrop-blur-sm hidden flex items-start justify-center pt-20 px-4" onclick="handleCommandBackdropClick(event)">
     <div class="animate-modal-in cmd-palette-dialog max-w-xl w-full p-0 shadow-2xl" onclick="event.stopPropagation()">
       <!-- Search Input -->
-      <div class="flex items-center px-4 py-3 border-b border-[#263244] gap-3">
-        <i class="fa-solid fa-magnifying-glass text-[#38BDF8] text-sm"></i>
+      <div class="flex items-center px-4 py-3 border-b border-[#333333] gap-3">
+        <i class="fa-solid fa-magnifying-glass text-[#FFFFFF] text-sm"></i>
         <input type="text" id="cmd-menu-input" placeholder="พิมพ์คำสั่งหรือค้นหา (Type command or navigate)..." 
-               class="w-full bg-transparent text-sm text-[#F1F5F9] focus:outline-none placeholder:text-[#94A3B8]/60 font-mono" 
+               class="w-full bg-transparent text-sm text-[#FFFFFF] focus:outline-none placeholder:text-[#A3A3A3]/60 font-mono" 
                autocomplete="off" oninput="filterCommandMenu(this.value)" onkeydown="handleCommandKeydown(event)" />
-        <kbd class="px-2 py-0.5 bg-[#182235] border border-[#263244] rounded text-[10px] text-[#94A3B8] font-mono">ESC</kbd>
+        <kbd class="px-2 py-0.5 bg-[#171717] border border-[#333333] rounded text-[10px] text-[#A3A3A3] font-mono">ESC</kbd>
       </div>
 
       <!-- Command List Items -->
@@ -1188,10 +1186,10 @@
       </div>
 
       <!-- Palette Footer -->
-      <div class="px-4 py-2 border-t border-[#263244] bg-[#090D16]/50 flex items-center justify-between text-[11px] font-mono text-[#94A3B8]">
+      <div class="px-4 py-2 border-t border-[#333333] bg-[#090909]/50 flex items-center justify-between text-[11px] font-mono text-[#A3A3A3]">
         <div class="flex items-center gap-3">
-          <span><kbd class="px-1 py-0.5 bg-[#182235] rounded text-[9px] text-[#38BDF8]">↑</kbd> <kbd class="px-1 py-0.5 bg-[#182235] rounded text-[9px] text-[#38BDF8]">↓</kbd> นำทาง</span>
-          <span><kbd class="px-1 py-0.5 bg-[#182235] rounded text-[9px] text-[#38BDF8]">Enter</kbd> เลือก</span>
+          <span><kbd class="px-1 py-0.5 bg-[#171717] rounded text-[9px] text-[#FFFFFF]">↑</kbd> <kbd class="px-1 py-0.5 bg-[#171717] rounded text-[9px] text-[#FFFFFF]">↓</kbd> นำทาง</span>
+          <span><kbd class="px-1 py-0.5 bg-[#171717] rounded text-[9px] text-[#FFFFFF]">Enter</kbd> เลือก</span>
         </div>
         <span>Khajonphan Dev Shell</span>
       </div>

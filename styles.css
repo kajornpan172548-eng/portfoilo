@@ -1,27 +1,27 @@
 /* ===================================================================
-   MODERN MINIMALIST DEVELOPER PORTFOLIO DESIGN SYSTEM
-   Theme: Professional Dark
+   DARK & WHITE MINIMALIST WITH BRIGHT VISUALS DESIGN SYSTEM
    Color Palette:
-     - Background:        #090D16
-     - Surface:           #111827
-     - Secondary Surface: #182235
-     - Primary Text:      #F1F5F9
-     - Secondary Text:    #94A3B8
-     - Accent:            #38BDF8
-     - Border:            #263244
+     - Main Background:      #090909
+     - Secondary Background: #171717
+     - Card Background:       #1F1F1F
+     - Primary Text:         #FFFFFF
+     - Secondary Text:       #A3A3A3
+     - Border:               #333333
+     - Accent:               #FFFFFF
    =================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Prompt:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-main: #090D16;
-  --surface: #111827;
-  --surface-secondary: #182235;
-  --text-primary: #F1F5F9;
-  --text-secondary: #94A3B8;
-  --accent: #38BDF8;
-  --accent-hover: #7dd3fc;
-  --border-color: #263244;
+  --bg-main: #090909;
+  --surface: #1F1F1F;
+  --surface-secondary: #171717;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A3A3A3;
+  --accent: #FFFFFF;
+  --accent-hover: #E5E5E5;
+  --border-color: #333333;
+  --border-subtle: #262626;
   --font-sans: 'Inter', 'Prompt', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
@@ -47,6 +47,20 @@ body {
 }
 
 /* -------------------------------------------------------------------
+   0. READING PROGRESS BAR
+   ------------------------------------------------------------------- */
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.5px;
+  background-color: var(--accent);
+  z-index: 70;
+  transition: width 0.08s linear;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* -------------------------------------------------------------------
    1. MINIMAL DEVELOPER BACKGROUND (CLEAN & SUBTLE)
    ------------------------------------------------------------------- */
 .dev-background {
@@ -58,16 +72,16 @@ body {
   pointer-events: none;
   background-color: var(--bg-main);
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(24, 34, 53, 0.45) 0%, transparent 70%),
-    radial-gradient(circle at 100% 100%, rgba(24, 34, 53, 0.3) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 255, 255, 0.035) 0%, transparent 70%),
+    radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
 }
 
 .dev-grid-pattern {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(38, 50, 68, 0.25) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(38, 50, 68, 0.25) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0) 80%);
   -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0) 80%);
@@ -84,8 +98,8 @@ body {
 }
 
 .dev-card:hover {
-  border-color: rgba(56, 189, 248, 0.35);
-  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7);
 }
 
 .dev-surface-secondary {
@@ -94,11 +108,11 @@ body {
 }
 
 /* -------------------------------------------------------------------
-   3. BUTTONS (MINIMALIST & PURPOSEFUL ACCENT)
+   3. BUTTONS (MINIMALIST & HIGH CONTRAST)
    ------------------------------------------------------------------- */
 .btn-accent {
-  background-color: var(--accent);
-  color: #090D16;
+  background-color: #FFFFFF;
+  color: #090909;
   font-weight: 600;
   border-radius: 0.5rem;
   padding: 0.625rem 1.25rem;
@@ -108,6 +122,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  border: 1px solid #FFFFFF;
 }
 
 .btn-accent:hover {
@@ -173,7 +188,7 @@ body {
 
 .nav-link:hover {
   color: var(--text-primary);
-  background-color: rgba(24, 34, 53, 0.6);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .nav-link.active {
@@ -201,12 +216,28 @@ body {
   background-color: var(--surface-secondary);
   color: var(--text-secondary);
   border: 1px solid var(--border-color);
-  transition: border-color 0.15s ease, color 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
 .tech-pill:hover {
-  border-color: rgba(56, 189, 248, 0.5);
+  border-color: var(--accent);
   color: var(--text-primary);
+}
+
+.tech-pill-interactive {
+  cursor: pointer;
+  user-select: none;
+}
+
+.tech-pill-interactive:hover {
+  border-color: var(--accent);
+  color: #FFFFFF;
+  background-color: #242424;
+  transform: translateY(-1px);
+}
+
+.tech-pill-interactive:active {
+  transform: translateY(0);
 }
 
 /* -------------------------------------------------------------------
@@ -227,12 +258,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #37475f;
+  background: #525252;
 }
 
 ::selection {
-  background-color: var(--accent);
-  color: #090D16;
+  background-color: #FFFFFF;
+  color: #090909;
 }
 
 .file-upload-input {
@@ -294,15 +325,15 @@ body {
    8. INTERACTIVE FEATURES & ANIMATIONS
    ------------------------------------------------------------------- */
 
-/* Cursor Spotlight (Desktop only, non-intrusive) */
+/* Cursor Spotlight (Desktop only, minimal soft white glow) */
 .cursor-spotlight {
   position: fixed;
   top: 0;
   left: 0;
-  width: 580px;
-  height: 580px;
+  width: 540px;
+  height: 540px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.055) 0%, rgba(56, 189, 248, 0.015) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 45%, transparent 70%);
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -314,8 +345,8 @@ body {
 /* Scroll Reveal */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -326,7 +357,7 @@ body {
 
 /* Developer Terminal Window */
 .dev-terminal {
-  background-color: #0b1120;
+  background-color: #121212;
   border: 1px solid var(--border-color);
   border-radius: 0.875rem;
   overflow: hidden;
@@ -335,11 +366,11 @@ body {
 }
 
 .dev-terminal:hover {
-  border-color: rgba(56, 189, 248, 0.4);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .term-header {
-  background-color: #111827;
+  background-color: #1A1A1A;
   border-bottom: 1px solid var(--border-color);
   padding: 0.625rem 0.875rem;
   display: flex;
@@ -372,7 +403,7 @@ body {
   cursor: pointer;
   background-color: var(--surface-secondary);
   border: 1px solid var(--border-color);
-  color: var(--accent);
+  color: #FFFFFF;
   padding: 0.2rem 0.5rem;
   border-radius: 0.375rem;
   font-size: 0.6875rem;
@@ -381,32 +412,16 @@ body {
 }
 
 .term-command-chip:hover {
-  background-color: var(--accent);
-  color: #090D16;
-}
-
-/* Interactive Skills Clickable Badge */
-.tech-pill-interactive {
-  cursor: pointer;
-  user-select: none;
-}
-
-.tech-pill-interactive:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-1px);
-}
-
-.tech-pill-interactive:active {
-  transform: translateY(0);
+  background-color: #FFFFFF;
+  color: #090909;
 }
 
 /* Command Palette Dialog */
 .cmd-palette-dialog {
-  background-color: #111827;
+  background-color: #1A1A1A;
   border: 1px solid var(--border-color);
   border-radius: 1rem;
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9);
   overflow: hidden;
 }
 
@@ -423,17 +438,43 @@ body {
 }
 
 .cmd-item:hover, .cmd-item.selected {
-  background-color: var(--surface-secondary);
-  color: var(--text-primary);
-  border-left: 2px solid var(--accent);
+  background-color: #262626;
+  color: #FFFFFF;
+  border-left: 2px solid #FFFFFF;
 }
 
 .cmd-item:hover i, .cmd-item.selected i {
-  color: var(--accent);
+  color: #FFFFFF;
 }
 
 /* -------------------------------------------------------------------
-   9. ACCESSIBILITY: REDUCED MOTION
+   9. VISUAL & IMAGE CLARITY (CRITICAL: 100% NATURAL, BRIGHT & SHARP)
+   ------------------------------------------------------------------- */
+.bright-visual {
+  filter: none !important;
+  opacity: 1 !important;
+  image-rendering: auto;
+}
+
+.project-img-frame {
+  position: relative;
+  background-color: #141414;
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.project-img-frame img {
+  filter: none !important;
+  opacity: 1 !important;
+  transition: transform 0.35s ease;
+}
+
+.dev-card:hover .project-img-frame img {
+  transform: scale(1.03);
+}
+
+/* -------------------------------------------------------------------
+   10. ACCESSIBILITY: REDUCED MOTION
    ------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html {
